@@ -194,7 +194,7 @@
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <div style="text-align: center;">
-              <img src="./figures/ctrl-o.drawio.png" style="width: 100%;" alt="CTRL-O model"/>
+              <img src="./static/images/converted_figures/ctrl-o.drawio.png" style="width: 100%;" alt="CTRL-O model"/>
             </div>
             <div class="content has-text-justified"><br />
               <p><strong>(a) CTRL-O architecture.</strong> An input image is processed by a frozen DINOv2 ViT model, yielding patch features. These features are then transformed by a learnable transformer encoder to align the feature space with the control queries. The control queries are introduced in the Slot Attention (SA) module, which guides the grouping of the encoded features into slots. The initial slots in the SA module are conditioned with the control queries. Finally, an MLP decoder, conditioned on control queries, reconstructs the DINOv2 features.</p>
@@ -219,7 +219,7 @@
           <div class="columns is-centered">
             <div class="column">
               <figure class="image">
-                <img src="./figures/vg_demo.png" alt="CTRL-O visual grounding example"/>
+                <img src="./static/images/converted_figures/vg_demo.png" alt="CTRL-O visual grounding example"/>
                 <figcaption class="has-text-centered mt-2">
                   CTRL-O is  able to bind language queries to specific objects in complex scenes and infers object-centric representations of corresponding objects.
                 </figcaption>
@@ -246,7 +246,7 @@
           <div class="columns is-centered">
             <div class="column">
               <figure class="image">
-                <img src="./figures/downstream_demo.png" alt="CTRL-O downstream applications"/>
+                <img src="./static/images/converted_figures/downstream_demo.png" alt="CTRL-O downstream applications"/>
                 <figcaption class="has-text-centered mt-2">
                   We demonstrate the effectiveness of CTRL-O on two key downstream applications: instance-controllable text-to-image generation and visual question answering. These applications showcase how language-controlled object-centric representations can enable precise control and reasoning.
                 </figcaption>

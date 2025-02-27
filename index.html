@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Language-Controllable Object-Centric Visual Representation Learning">
+  <meta property="og:title" content="CTRL-O"/>
+  <meta property="og:description" content="Language-Controllable Object-Centric Visual Representation Learning"/>
+  <meta property="og:url" content="https://ctrl-o-paper.github.io/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- <meta property="og:image" content="" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/> -->
+
+  <meta name="twitter:title" content="CTRL-O">
+  <meta name="twitter:description" content="Language-Controllable Object-Centric Visual Representation Learning">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimensions are 1200X600-->
+  <!--<meta name="twitter:image" content="">
+  <meta name="twitter:card" content="summary_large_image">-->
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="object-centric representations, scene decomposition, language control, CTRL-O, object-centric learning, controllable representation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>CTRL-O</title>
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>-->
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <!-- <script src="./static/js/bulma-carousel.min.js"></script> -->
+  <script src="./static/js/bulma-carousel.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">CTRL-O: Language-Controllable Object-Centric Visual Representation Learning</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://aniket-didolkar.github.io/" target="_blank">Aniket Rajiv Didolkar</a><sup>1,2*</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+                <a href="https://zadaianchuk.github.io/" target="_blank">Andrii Zadaianchuk</a><sup>3*†</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+                <a href="https://rabiul.me/" target="_blank">Rabiul Awal</a><sup>1,2*</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/maximilian-seitzer-85ba41119/" target="_blank">Maximilian Seitzer</a><sup>4</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+                <a href="https://ivi.fnwi.uva.nl/vislab/author/efstratios-gavves/" target="_blank">Efstratios Gavves</a><sup>3</sup>&nbsp;&nbsp;&nbsp;&nbsp;
+              </span>
+              <span class="author-block">
+                <a href="https://www.iro.umontreal.ca/~agrawal/" target="_blank">Aishwarya Agrawal</a><sup>1,2†</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Mila - Quebec AI Institute</span>&nbsp;&nbsp;
+              <span class="author-block"><sup>2</sup>Université de Montréal</span>&nbsp;&nbsp;
+              <span class="author-block"><sup>3</sup>University of Amsterdam</span>&nbsp;&nbsp;
+              <span class="author-block"><sup>4</sup> Meta </span>
+            </div>
+            <div class="is-size-6" style="padding-top: 0.5em;">
+              <span class="author-block"><sup>*</sup>Equal contribution. Order determined by flipping a coin.</span>&nbsp;&nbsp;
+              <span class="author-block"><sup>†</sup>Equal advising</span>
+            </div>
+            <div class="is-size-4" style="padding-top: 0.25em;">
+              <span class="author-block">Published at CVPR 2025</span>
+            </div>
+            <div class="column has-text-centered">
+              <div class="publication-links">
+              <!-- CVPR link - To be added later -->
+              <!--
+              <span class="link-block">
+                <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="far fa-circle"></i>
+                  </span>
+                  <span>CVPR</span>
+                </a>
+                &nbsp;
+              </span>
+              -->
+              
+              <!-- PDF link - To be added later -->
+              <!--
+              <span class="link-block">
+                <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>PDF</span>
+                </a>
+                &nbsp;
+              </span>
+              -->                
+
+              <!-- ArXiv abstract Link - To be added later -->
+              <!--
+              <span class="link-block">
+                <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+                &nbsp;
+              </span>
+              -->
+
+              <!-- Github link - To be added later -->
+              <!--
+              <span class="link-block">
+                <a href="#" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+                </a>
+                &nbsp;
+              </span>
+              -->
+              <span class="link-block">
+                <a href="static/ctrl-o-paper.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+                &nbsp;
+              </span>
+              <!-- Contact -->
+              <span class="link-block">
+                <a href="mailto:adidolkar123@gmail.com, a.zadaianchuk@uva.nl, rabiul.awal@mila.quebec" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fa fa-envelope"></i>
+                </span>
+                <span>Contact</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Object-centric representation learning aims to decompose visual scenes into fixed-size vectors called "slots" or "object files", where each slot captures a distinct object. Current state-of-the-art object-centric models have shown remarkable success in object discovery in diverse domains, including complex real-world scenes. However, these models suffer from a key limitation: they lack controllability. Specifically, current object-centric models learn representations based on their preconceived understanding of objects and parts, without allowing user input to guide which objects are represented.
+            </p>
+            <p>
+              Introducing controllability into object-centric models could unlock a range of useful capabilities, such as the ability to extract instance-specific representations from a scene. In this work, we propose a novel approach for user-directed control over slot representations by conditioning slots on language descriptions. The proposed <strong>Con<span style="text-decoration: underline;">TR</span>o<span style="text-decoration: underline;">L</span>lable <span style="text-decoration: underline;">O</span>bject-centric representation learning</strong> approach, which we term CTRL-O, achieves targeted object-language binding in complex real-world scenes without requiring mask supervision. Next, we apply these controllable slot representations on two downstream vision language tasks: text-to-image generation and visual question answering. We find that the proposed approach enables instance-specific text-to-image generation and also achieves strong performance on visual question answering.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <!-- <h2 class="title is-3">Model</h2> -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div style="text-align: center;">
+              <img src="./figures/ctrl-o.drawio.png" style="width: 100%;" alt="CTRL-O model"/>
+            </div>
+            <div class="content has-text-justified"><br />
+              <p><strong>(a) CTRL-O architecture.</strong> An input image is processed by a frozen DINOv2 ViT model, yielding patch features. These features are then transformed by a learnable transformer encoder to align the feature space with the control queries. The control queries are introduced in the Slot Attention (SA) module, which guides the grouping of the encoded features into slots. The initial slots in the SA module are conditioned with the control queries. Finally, an MLP decoder, conditioned on control queries, reconstructs the DINOv2 features.</p>
+              <p><strong> (b) Control Contrastive Loss</strong> To ensure that slots use query information to represent specific objects, we apply a contrastive loss between control queries and the Slot Attention-modulated weighted DINO features (referred to as weighted DINO slots).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image carousel -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Visual Grounding with Language Queries</h2>
+        <div class="content has-text-justified">
+        </div>
+        
+        <!-- First example -->
+        <div class="box">
+          <div class="columns is-centered">
+            <div class="column">
+              <figure class="image">
+                <img src="./figures/vg_demo.png" alt="CTRL-O visual grounding example"/>
+                <figcaption class="has-text-centered mt-2">
+                  CTRL-O is  able to bind language queries to specific objects in complex scenes and infers object-centric representations of corresponding objects.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <!-- End examples section -->
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Downstream Tasks</h2>
+        <div class="content has-text-justified">
+          <p>CTRL-O enables powerful downstream applications by providing controllable object-centric representations.</p>
+        </div>
+        
+        <!-- Downstream tasks example -->
+        <div class="box">
+          <div class="columns is-centered">
+            <div class="column">
+              <figure class="image">
+                <img src="./figures/downstream_demo.png" alt="CTRL-O downstream applications"/>
+                <figcaption class="has-text-centered mt-2">
+                  We demonstrate the effectiveness of CTRL-O on two key downstream applications: instance-controllable text-to-image generation and visual question answering. These applications showcase how language-controlled object-centric representations can enable precise control and reasoning.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Key Findings</h2>
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <div class="content has-text-justified">
+              <ul>
+                <li><strong>Language Control:</strong> CTRL-O allows users to control which objects are represented in the slot representations using language queries, including simple object category names and complex referring expressions.</li>
+                <li><strong>No Mask Supervision:</strong> Our approach works without requiring mask supervision, making it applicable to a wide range of real-world scenarios.</li>
+                <li><strong>Downstream Applications:</strong> We demonstrate the effectiveness of CTRL-O on two downstream applications:
+                  <ul>
+                    <li><strong>Instance-Controllable Image Generation:</strong> CTRL-O enables generating images where specific objects can be controlled while maintaining the context.</li>
+                    <li><strong>Visual Question Answering:</strong> Controllable object-centric representations achieve strong performance on visual question answering tasks.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--BibTex citation -->
+  <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>
+@inproceedings{didolkar2025ctrlo,
+    title={CTRL-O: Language-Controllable Object-Centric Visual Representation Learning},
+    author={Didolkar, Aniket Rajiv and Zadaianchuk, Andrii and Awal, Rabiul and Seitzer, Maximilian and Gavves, Efstratios and Agrawal, Aishwarya},
+    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year={2025}
+}
+        </code></pre>
+      </div>
+  </section>
+  <!--End BibTex citation -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

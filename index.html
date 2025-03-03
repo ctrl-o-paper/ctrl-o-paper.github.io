@@ -195,7 +195,7 @@
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
             <div style="text-align: center;">
-              <img src="./static/images/converted_figures/ctrl-o.drawio.png" style="width: 100%;" alt="CTRL-O model"/>
+              <img src="./static/images/converted_figures/ctrl-o.png" style="width: 100%;" alt="CTRL-O model"/>
             </div>
             <div class="content has-text-justified"><br />
               <p><strong>(a) CTRL-O architecture.</strong> An input image is processed by a frozen DINOv2 ViT model, yielding patch features. These features are then transformed by a learnable transformer encoder to align the feature space with the control queries. The control queries are introduced in the Slot Attention (SA) module, which guides the grouping of the encoded features into slots. The initial slots in the SA module are conditioned with the control queries. Finally, an MLP decoder, conditioned on control queries, reconstructs the DINOv2 features.</p>

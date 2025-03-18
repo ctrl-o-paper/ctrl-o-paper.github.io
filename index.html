@@ -190,6 +190,27 @@
     canvas, svg {
       filter: none !important;
     }
+    
+    /* Responsive annotations - show/hide based on screen size */
+    @media screen and (max-width: 1023px) {
+      .side-annotation {
+        display: none !important;
+      }
+      
+      .downstream-container {
+        padding: 0 !important;
+      }
+      
+      .mobile-annotation {
+        display: block !important;
+      }
+    }
+    
+    @media screen and (min-width: 1024px) {
+      .mobile-annotation {
+        display: none !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -429,15 +450,15 @@
   <!-- End paper abstract -->
 
   <!-- Model section - Refined minimal magazine layout -->
-  <section id="model" class="hero" style="padding: 5rem 0 6rem; background-color: #f9fbfd; overflow: hidden; position: relative;">
+  <section id="model" class="hero is-small" style="padding-top: 1.5rem; padding-bottom: 1.5rem; background-color: #f9fbfd; overflow: hidden; position: relative;">
     <!-- Background decorative elements - neutral -->
     <div style="position: absolute; top: 20%; right: 0; width: 40vw; height: 40vw; max-width: 500px; max-height: 500px; background: radial-gradient(circle, rgba(0,0,0,0.015) 0%, rgba(0,0,0,0) 70%); border-radius: 50%;"></div>
     <div style="position: absolute; bottom: 10%; left: 0; width: 25vw; height: 25vw; max-width: 300px; max-height: 300px; background: radial-gradient(circle, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0) 70%); border-radius: 50%;"></div>
     
-    <div class="hero-body" style="padding: 0;">
+    <div class="hero-body" style="padding: 1rem 1.5rem;">
       <!-- Refined minimal title -->
       <div class="container is-max-desktop">
-        <h2 class="title" style="font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.03em; margin-bottom: 4rem; font-size: 2.2rem; position: relative; max-width: 80%;">
+        <h2 class="title" style="font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.03em; margin-bottom: 2rem; font-size: 2.2rem; position: relative;">
           <span style="display: inline-block; position: relative; color: #333; z-index: 1;">
             <span style="color: #999; font-weight: 300; font-size: 1rem; display: block; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.05em;">Architecture</span>
             Model Design
@@ -448,7 +469,7 @@
       <!-- Main layout with side annotations -->
       <div class="container is-max-desktop" style="position: relative;">
         <!-- Image with annotations adjacent - top level container -->
-        <div style="position: relative;">
+        <div style="position: relative;" class="downstream-container">
           <!-- Main image -->
           <figure style="position: relative; z-index: 1; margin-bottom: 5rem; padding: 0 0 2rem 0;">
             <img src="./static/images/converted_figures/ctrl-o.png" style="width: 85%; max-width: 850px; margin: 0 auto; display: block; border-radius: 1px; box-shadow: none;" alt="CTRL-O model"/>
@@ -456,9 +477,9 @@
             <!-- Elegant caption -->
             <figcaption style="position: absolute; bottom: 0; right: 7.5%; background-color: white; padding: 0.6rem 1rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; color: #666; letter-spacing: 0.05em; box-shadow: none; border: 1px solid #f0f0f0;">CTRL-O ARCHITECTURE</figcaption>
             
-            <!-- Key point annotations directly on the sides -->
+            <!-- Key point annotations directly on the sides - hidden on mobile -->
             <!-- Language Control annotation - Left side -->
-            <div style="position: absolute; top: 20%; left: -4rem; width: 9rem; text-align: right;">
+            <div class="side-annotation" style="position: absolute; top: 20%; left: -4rem; width: 9rem; text-align: right;">
               <h5 style="font-family: 'Inter', sans-serif; font-size: 1.15rem; font-weight: 600; margin-bottom: 0.6rem; color: #333; letter-spacing: -0.01em; line-height: 1.3;">
                 Language Control 
                 <span style="display: inline-block; margin-left: 0.3rem; color: #bbb; font-weight: 400; font-size: 0.75rem;">01</span>
@@ -471,7 +492,7 @@
             </div>
             
             <!-- Slot Attention annotation - Right side -->
-            <div style="position: absolute; top: 30%; right: -4.5rem; width: 9.5rem; text-align: left;">
+            <div class="side-annotation" style="position: absolute; top: 30%; right: -4.5rem; width: 9.5rem; text-align: left;">
               <h5 style="font-family: 'Inter', sans-serif; font-size: 1.15rem; font-weight: 600; margin-bottom: 0.6rem; color: #333; letter-spacing: -0.01em; line-height: 1.3;">
                 <span style="display: inline-block; margin-right: 0.3rem; color: #bbb; font-weight: 400; font-size: 0.75rem;">02</span>
                 Slot Attention Module
@@ -484,7 +505,7 @@
             </div>
             
             <!-- Contrastive Loss annotation - Lower right -->
-            <div style="position: absolute; bottom: 15%; right: -4.5rem; width: 9.5rem; text-align: left;">
+            <div class="side-annotation" style="position: absolute; bottom: 15%; right: -4.5rem; width: 9.5rem; text-align: left;">
               <h5 style="font-family: 'Inter', sans-serif; font-size: 1.15rem; font-weight: 600; margin-bottom: 0.6rem; color: #333; letter-spacing: -0.01em; line-height: 1.3;">
                 <span style="display: inline-block; margin-right: 0.3rem; color: #bbb; font-weight: 400; font-size: 0.75rem;">03</span>
                 Contrastive Loss
@@ -494,6 +515,31 @@
               </p>
               <!-- Connecting line -->
               <div style="position: absolute; top: 50%; left: -0.5rem; width: 0.8rem; height: 1px; background-color: rgba(0,0,0,0.1);"></div>
+            </div>
+            
+            <!-- Mobile-only annotation (simplified) -->
+            <div class="mobile-annotation" style="display: none; margin-top: 1.5rem;">
+              <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
+                <span style="display: inline-block; min-width: 1.5rem; height: 1.5rem; border-radius: 50%; background-color: #f5f5f5; color: #999; text-align: center; line-height: 1.5rem; font-size: 0.7rem;">01</span>
+                <div>
+                  <h5 style="font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem; color: #333;">Language Control</h5>
+                  <p style="font-family: 'Inter', sans-serif; font-size: 0.8rem; margin: 0; color: #666;">Control queries guide the slot attention process</p>
+                </div>
+              </div>
+              <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
+                <span style="display: inline-block; min-width: 1.5rem; height: 1.5rem; border-radius: 50%; background-color: #f5f5f5; color: #999; text-align: center; line-height: 1.5rem; font-size: 0.7rem;">02</span>
+                <div>
+                  <h5 style="font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem; color: #333;">Slot Attention Module</h5>
+                  <p style="font-family: 'Inter', sans-serif; font-size: 0.8rem; margin: 0; color: #666;">Features group into object-centric slots</p>
+                </div>
+              </div>
+              <div style="display: flex; gap: 1rem; align-items: center;">
+                <span style="display: inline-block; min-width: 1.5rem; height: 1.5rem; border-radius: 50%; background-color: #f5f5f5; color: #999; text-align: center; line-height: 1.5rem; font-size: 0.7rem;">03</span>
+                <div>
+                  <h5 style="font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem; color: #333;">Contrastive Loss</h5>
+                  <p style="font-family: 'Inter', sans-serif; font-size: 0.8rem; margin: 0; color: #666;">Binds queries to visual objects</p>
+                </div>
+              </div>
             </div>
           </figure>
         </div>
@@ -833,9 +879,9 @@
               <h3 class="title is-5 mb-3" style="font-family: 'Inter', sans-serif; font-weight: 600;"><i class="fas fa-project-diagram"></i> Overview of CTRL-O Downstream Tasks</h3>
               
               <!-- Container with relative positioning to allow for side annotations -->
-              <div style="position: relative; display: flex; justify-content: center; padding: 0 12rem; margin-bottom: 3rem;">
+              <div style="position: relative; display: flex; justify-content: center; padding: 0 12rem; margin-bottom: 3rem;" class="downstream-container">
                 <!-- Left side annotation - Text-to-Image Generation -->
-                <div style="position: absolute; top: 35%; left: 0; width: 10rem; text-align: right;">
+                <div class="side-annotation" style="position: absolute; top: 35%; left: 0; width: 10rem; text-align: right;">
                   <h5 style="font-family: 'Inter', sans-serif; font-size: 1.15rem; font-weight: 600; margin-bottom: 0.6rem; color: #333; letter-spacing: -0.01em; line-height: 1.3;">
                     <span style="display: inline-block; margin-left: 0.3rem; color: #bbb; font-weight: 400; font-size: 0.75rem;">a</span> 
                     T2I Generation
@@ -856,7 +902,7 @@
                 </figure>
                 
                 <!-- Right side annotation - Visual Question Answering -->
-                <div style="position: absolute; top: 35%; right: 0; width: 10rem; text-align: left;">
+                <div class="side-annotation" style="position: absolute; top: 35%; right: 0; width: 10rem; text-align: left;">
                   <h5 style="font-family: 'Inter', sans-serif; font-size: 1.15rem; font-weight: 600; margin-bottom: 0.6rem; color: #333; letter-spacing: -0.01em; line-height: 1.3;">
                     <span style="display: inline-block; margin-right: 0.3rem; color: #bbb; font-weight: 400; font-size: 0.75rem;">b</span>
                     Visual QA
@@ -866,6 +912,24 @@
                   </p>
                   <!-- Connecting line -->
                   <div style="position: absolute; top: 50%; left: -1.5rem; width: 1.5rem; height: 1px; background-color: rgba(0,0,0,0.1);"></div>
+                </div>
+                
+                <!-- Mobile-only annotation -->
+                <div class="mobile-annotation" style="display: none; margin-top: 1.5rem;">
+                  <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
+                    <span style="display: inline-block; min-width: 1.5rem; height: 1.5rem; border-radius: 50%; background-color: #f5f5f5; color: #999; text-align: center; line-height: 1.5rem; font-size: 0.7rem;">a</span>
+                    <div>
+                      <h5 style="font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem; color: #333;">T2I Generation</h5>
+                      <p style="font-family: 'Inter', sans-serif; font-size: 0.8rem; margin: 0; color: #666;">Instance-specific text-to-image generation with context preservation</p>
+                    </div>
+                  </div>
+                  <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
+                    <span style="display: inline-block; min-width: 1.5rem; height: 1.5rem; border-radius: 50%; background-color: #f5f5f5; color: #999; text-align: center; line-height: 1.5rem; font-size: 0.7rem;">b</span>
+                    <div>
+                      <h5 style="font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem; color: #333;">Visual QA</h5>
+                      <p style="font-family: 'Inter', sans-serif; font-size: 0.8rem; margin: 0; color: #666;">Language-object binding for precise query answering</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

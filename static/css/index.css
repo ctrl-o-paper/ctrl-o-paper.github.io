@@ -14,7 +14,7 @@ body {
   --accent-color: #4a89dc;
   --light-bg: #f5f7fa;
   --border-radius: 6px;
-  --subtle-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --subtle-shadow: none;
   --border-color: rgba(0, 0, 0, 0.1);
   --highlight-color: #f39c12;
   --success-color: #2ecc71;
@@ -70,7 +70,7 @@ body {
 
 .button.is-normal.is-rounded.is-dark:hover {
   background-color: var(--accent-color);
-  transform: translateY(-1px);
+  transform: none;
 }
 
 .link-block a {
@@ -89,6 +89,7 @@ body {
   padding: 2rem;
   margin-bottom: 2rem;
   transition: none;
+  box-shadow: none;
 }
 
 .box:hover {
@@ -128,6 +129,7 @@ figcaption {
   background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
   border-radius: var(--border-radius);
   margin: 1rem 0;
+  box-shadow: none;
 }
 
 .abstract-container {
@@ -136,6 +138,7 @@ figcaption {
   background-color: white;
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
+  box-shadow: none;
 }
 
 .title.is-3 {
@@ -174,6 +177,7 @@ figcaption {
   border-right: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
   transition: none;
+  box-shadow: none;
 }
 
 .highlight-item:hover {
@@ -236,6 +240,7 @@ figcaption {
   border-radius: var(--border-radius) !important;
   border: 1px solid var(--border-color);
   margin: 2rem 0;
+  box-shadow: none;
 }
 
 .publication-video iframe {

@@ -45,21 +45,150 @@
   
   <!-- Custom styles to override Bulma defaults -->
   <style>
-    /* Override Bulma's is-selected class with a teal/turquoise color */
+    /* Override Bulma's is-selected class with a neutral color */
     .table tr.is-selected {
-      background-color: rgba(54, 207, 166, 0.3) !important;
+      background-color: rgba(0, 0, 0, 0.03) !important;
       color: #333 !important;
     }
     
     .table tr.is-selected td, 
     .table tr.is-selected th {
-      border-color: #ddd !important;
+      border-color: rgba(0, 0, 0, 0.08) !important;
       color: #333 !important;
+      font-weight: 500 !important;
     }
     
-    /* Override blue highlighted cells with teal */
+    /* Override blue highlighted cells with neutral */
     .table td[style*="background-color: rgba(50, 115, 220, 0.1)"] {
-      background-color: rgba(54, 207, 166, 0.3) !important;
+      background-color: rgba(0, 0, 0, 0.03) !important;
+      font-weight: 500 !important;
+    }
+
+    /* Remove all box shadows for a more elegant design */
+    .button, 
+    .input, 
+    .textarea, 
+    .box, 
+    .notification, 
+    .dropdown-menu, 
+    .dropdown-content,
+    .hero,
+    .card,
+    .image img,
+    .navbar {
+      box-shadow: none !important;
+    }
+    
+    /* Remove button focus shadow effects */
+    .button:focus:not(:active),
+    .button.is-focused:not(:active),
+    .button:active,
+    .button.is-active {
+      box-shadow: none !important;
+    }
+    
+    /* Replace box shadows with subtle borders */
+    .box, .card {
+      border: 1px solid rgba(0,0,0,0.06) !important;
+    }
+    
+    /* Remove inset shadows from inputs */
+    .input, .textarea {
+      box-shadow: none !important;
+      border: 1px solid rgba(0,0,0,0.08) !important;
+    }
+    
+    /* Remove shadow from hero section */
+    .hero.is-small.has-background-gradient {
+      box-shadow: none !important;
+    }
+    
+    /* Remove scroll indicator shadow */
+    .scroll-indicator {
+      box-shadow: none !important;
+    }
+    
+    /* Improved figure caption styling without shadows */
+    figure figcaption {
+      box-shadow: none !important;
+      border: 1px solid rgba(0,0,0,0.05) !important;
+    }
+    
+    /* Refined interactive states for buttons and links */
+    .button:hover, 
+    .button:focus, 
+    .button:active {
+      transform: none !important;
+      transition: background-color 0.2s ease-in-out !important;
+    }
+    
+    /* Improve table cell styling - remove shadows, add refined borders */
+    .table td, .table th {
+      border: 1px solid rgba(0,0,0,0.04) !important;
+    }
+    
+    /* Add subtle border transitions for interactive elements */
+    .button, .input, .textarea, a.box {
+      transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out !important;
+    }
+    
+    /* Override any focus rings with more subtle outlines */
+    *:focus {
+      outline: 1px solid rgba(0, 0, 0, 0.1) !important;
+      outline-offset: 1px !important;
+    }
+    
+    /* Refine charts and data visualizations */
+    canvas, svg {
+      filter: none !important;
+    }
+
+    /* Refined table styling for magazine-like appearance */
+    .table {
+      border-collapse: collapse !important;
+      width: 100% !important;
+      margin-bottom: 2rem !important;
+      font-family: 'Inter', sans-serif !important;
+    }
+    
+    .table th {
+      font-weight: 500 !important;
+      color: #666 !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+      padding: 0.75rem 0.5rem !important;
+      font-size: 0.8rem !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.03em !important;
+    }
+    
+    .table td {
+      padding: 1rem 0.5rem !important;
+      border: none !important;
+      border-bottom: 1px solid rgba(0,0,0,0.04) !important;
+      color: #444 !important;
+      font-size: 0.85rem !important;
+    }
+    
+    .table tr:last-child td {
+      border-bottom: none !important;
+    }
+    
+    /* Remove alternating rows background */
+    .table tr:nth-child(even) {
+      background-color: transparent !important;
+    }
+    
+    /* Add subtle border transitions for interactive elements */
+    .button, .input, .textarea, a.box {
+      transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out !important;
+    }
+    
+    /* Refine charts and data visualizations */
+    canvas, svg {
+      filter: none !important;
     }
   </style>
 </head>
@@ -245,19 +374,19 @@
         </span>
       </h2>
       
-      <!-- Paper highlights cards -->
-      <div class="paper-highlights" style="margin-bottom: 1rem; display: flex; gap: 0.75rem;">
-        <div class="highlight-item" style="padding: 0.75rem; flex: 1;">
-          <h4 style="font-size: 1.1rem; margin-bottom: 0.3rem;"><i class="fas fa-magic"></i> Language Control</h4>
-          <p style="font-size: 0.9rem; margin-bottom: 0;">Control which objects are represented using natural language queries and referring expressions</p>
+      <!-- Paper highlights with more elegant styling - without green lines -->
+      <div style="margin: 2.5rem 0 3rem; display: flex; gap: 2rem;">
+        <div style="flex: 1;">
+          <h4 style="font-family: 'Inter', sans-serif; font-size: 1.05rem; font-weight: 500; margin-bottom: 0.7rem; color: #333; letter-spacing: -0.01em;"><i class="fas fa-magic" style="color: #777; margin-right: 0.5rem; opacity: 0.7;"></i>Language Control</h4>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; line-height: 1.5; color: #666; letter-spacing: 0.01em;">Control which objects are represented using natural language queries and referring expressions</p>
         </div>
-        <div class="highlight-item" style="padding: 0.75rem; flex: 1;">
-          <h4 style="font-size: 1.1rem; margin-bottom: 0.3rem;"><i class="fas fa-robot"></i> Weak Supervision</h4>
-          <p style="font-size: 0.9rem; margin-bottom: 0;">Works without requiring mask supervision, applicable to a wide range of real-world scenarios</p>
+        <div style="flex: 1;">
+          <h4 style="font-family: 'Inter', sans-serif; font-size: 1.05rem; font-weight: 500; margin-bottom: 0.7rem; color: #333; letter-spacing: -0.01em;"><i class="fas fa-robot" style="color: #777; margin-right: 0.5rem; opacity: 0.7;"></i>Weak Supervision</h4>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; line-height: 1.5; color: #666; letter-spacing: 0.01em;">Works without requiring mask supervision, applicable to a wide range of real-world scenarios</p>
         </div>
-        <div class="highlight-item" style="padding: 0.75rem; flex: 1;">
-          <h4 style="font-size: 1.1rem; margin-bottom: 0.3rem;"><i class="fas fa-brain"></i> Multimodal Applications</h4>
-          <p style="font-size: 0.9rem; margin-bottom: 0;">Enables both instance-specific text-to-image generation and visual question answering capabilities</p>
+        <div style="flex: 1;">
+          <h4 style="font-family: 'Inter', sans-serif; font-size: 1.05rem; font-weight: 500; margin-bottom: 0.7rem; color: #333; letter-spacing: -0.01em;"><i class="fas fa-brain" style="color: #777; margin-right: 0.5rem; opacity: 0.7;"></i>Multimodal Applications</h4>
+          <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; line-height: 1.5; color: #666; letter-spacing: 0.01em;">Enables both instance-specific text-to-image generation and visual question answering capabilities</p>
         </div>
       </div>
       
@@ -301,9 +430,9 @@
 
   <!-- Model section - Refined minimal magazine layout -->
   <section id="model" class="hero" style="padding: 5rem 0 6rem; background-color: #f9fbfd; overflow: hidden; position: relative;">
-    <!-- Background decorative elements -->
-    <div style="position: absolute; top: 20%; right: 0; width: 40vw; height: 40vw; max-width: 500px; max-height: 500px; background: radial-gradient(circle, rgba(54,207,166,0.02) 0%, rgba(54,207,166,0) 70%); border-radius: 50%;"></div>
-    <div style="position: absolute; bottom: 10%; left: 0; width: 25vw; height: 25vw; max-width: 300px; max-height: 300px; background: radial-gradient(circle, rgba(54,207,166,0.015) 0%, rgba(54,207,166,0) 70%); border-radius: 50%;"></div>
+    <!-- Background decorative elements - neutral -->
+    <div style="position: absolute; top: 20%; right: 0; width: 40vw; height: 40vw; max-width: 500px; max-height: 500px; background: radial-gradient(circle, rgba(0,0,0,0.015) 0%, rgba(0,0,0,0) 70%); border-radius: 50%;"></div>
+    <div style="position: absolute; bottom: 10%; left: 0; width: 25vw; height: 25vw; max-width: 300px; max-height: 300px; background: radial-gradient(circle, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0) 70%); border-radius: 50%;"></div>
     
     <div class="hero-body" style="padding: 0;">
       <!-- Refined minimal title -->
@@ -395,7 +524,7 @@
           <p>Our evaluation shows that CTRL-O significantly outperforms existing approaches and benefits from key architectural components.</p>
         </div>
 
-        <div class="box" style="padding: 1.5rem; box-shadow: 0 6px 15px rgba(0,0,0,0.08); border-radius: 8px;">
+        <div style="margin-bottom: 3rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.04);">
           <div class="columns is-multiline">
             <!-- Component Ablation Table -->
             <div class="column is-6">
@@ -536,7 +665,7 @@
           <p>Our approach enables precise binding between language descriptions and visual objects in complex scenes without requiring mask supervision.</p>
         </div>
         
-        <div class="box" style="padding: 1.5rem; box-shadow: 0 6px 15px rgba(0,0,0,0.08); border-radius: 8px;">
+        <div style="margin-bottom: 3rem;">
           <!-- Visual grounding example -->
           <div class="columns is-multiline">
             <div class="column is-12 mb-4">
@@ -697,7 +826,7 @@
           <p>CTRL-O enables powerful downstream applications by providing controllable object-centric representations.</p>
         </div>
         
-        <div class="box" style="padding: 1rem;">
+        <div style="margin-bottom: 3rem;">
           <!-- Overview section -->
           <div class="columns">
             <div class="column is-12">
@@ -783,15 +912,15 @@
           BibTeX
         </span>
       </h2>
-      <div class="citation-box">
+      <div style="border-left: 1px solid rgba(0,0,0,0.08); padding-left: 2rem; margin: 2rem 0;">
         <div class="content">
-          <pre><code id="citationText">@inproceedings{didolkar2025ctrlo,
+          <pre style="background-color: #fcfcfc; border: none; padding: 1.5rem 0;"><code id="citationText" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; color: #333;">@inproceedings{didolkar2025ctrlo,
     title={CTRL-O: Language-Controllable Object-Centric Visual Representation Learning},
     author={Didolkar, Aniket Rajiv and Zadaianchuk, Andrii and Awal, Rabiul and Seitzer, Maximilian and Gavves, Efstratios and Agrawal, Aishwarya},
     booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
     year={2025}
 }</code></pre>
-          <button class="copy-button" id="copyButton">
+          <button class="copy-button" id="copyButton" style="background-color: transparent; color: #333; border: 1px solid rgba(0,0,0,0.1); border-radius: 0; padding: 0.5rem 1.5rem; transition: all 0.2s ease;">
             <i class="fas fa-copy"></i> Copy Citation
           </button>
         </div>
@@ -908,15 +1037,15 @@
             {
               label: 'No-Coupling',
               data: [58.26, 58.43, 58.32, 59.18],
-              backgroundColor: 'rgba(75, 137, 220, 0.7)',
-              borderColor: 'rgba(75, 137, 220, 1)',
+              backgroundColor: 'rgba(120, 120, 120, 0.5)',
+              borderColor: 'rgba(100, 100, 100, 0.8)',
               borderWidth: 1
             },
             {
               label: 'Coupling',
               data: [58.12, 58.64, 57.66, 60.25],
-              backgroundColor: 'rgba(50, 115, 220, 0.9)',
-              borderColor: 'rgba(50, 115, 220, 1)',
+              backgroundColor: 'rgba(70, 70, 70, 0.7)',
+              borderColor: 'rgba(50, 50, 50, 0.8)',
               borderWidth: 1
             }
           ]
@@ -1009,7 +1138,7 @@
           ctx.textAlign = 'center';
           ctx.textBaseline = 'middle';
           ctx.font = 'bold 18px Arial, sans-serif'; // Smaller font size
-          ctx.fillStyle = 'gold';
+          ctx.fillStyle = 'rgba(100, 100, 100, 0.7)';
           
           // Star symbol for No-Coupling (CTRL-O)
           ctx.fillText('★', ctrlOBar0.x, ctrlOBar0.y - 20); // Less vertical space

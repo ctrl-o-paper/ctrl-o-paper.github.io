@@ -25,6 +25,7 @@
   <title>CTRL-O</title>
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
@@ -42,176 +43,6 @@
   <script src="./static/js/index.js"></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  
-  <!-- Custom styles to override Bulma defaults -->
-  <style>
-    /* Override Bulma's is-selected class with a neutral color */
-    .table tr.is-selected {
-      background-color: rgba(0, 0, 0, 0.03) !important;
-      color: #333 !important;
-    }
-    
-    .table tr.is-selected td, 
-    .table tr.is-selected th {
-      border-color: rgba(0, 0, 0, 0.08) !important;
-      color: #333 !important;
-      font-weight: 500 !important;
-    }
-    
-    /* Override blue highlighted cells with neutral */
-    .table td[style*="background-color: rgba(50, 115, 220, 0.1)"] {
-      background-color: rgba(0, 0, 0, 0.03) !important;
-      font-weight: 500 !important;
-    }
-
-    /* Remove all box shadows for a more elegant design */
-    .button, 
-    .input, 
-    .textarea, 
-    .box, 
-    .notification, 
-    .dropdown-menu, 
-    .dropdown-content,
-    .hero,
-    .card,
-    .image img,
-    .navbar {
-      box-shadow: none !important;
-    }
-    
-    /* Remove button focus shadow effects */
-    .button:focus:not(:active),
-    .button.is-focused:not(:active),
-    .button:active,
-    .button.is-active {
-      box-shadow: none !important;
-    }
-    
-    /* Replace box shadows with subtle borders */
-    .box, .card {
-      border: 1px solid rgba(0,0,0,0.06) !important;
-    }
-    
-    /* Remove inset shadows from inputs */
-    .input, .textarea {
-      box-shadow: none !important;
-      border: 1px solid rgba(0,0,0,0.08) !important;
-    }
-    
-    /* Remove shadow from hero section */
-    .hero.is-small.has-background-gradient {
-      box-shadow: none !important;
-    }
-    
-    /* Remove scroll indicator shadow */
-    .scroll-indicator {
-      box-shadow: none !important;
-    }
-    
-    /* Improved figure caption styling without shadows */
-    figure figcaption {
-      box-shadow: none !important;
-      border: 1px solid rgba(0,0,0,0.05) !important;
-    }
-    
-    /* Refined interactive states for buttons and links */
-    .button:hover, 
-    .button:focus, 
-    .button:active {
-      transform: none !important;
-      transition: background-color 0.2s ease-in-out !important;
-    }
-    
-    /* Improve table cell styling - remove shadows, add refined borders */
-    .table td, .table th {
-      border: 1px solid rgba(0,0,0,0.04) !important;
-    }
-    
-    /* Add subtle border transitions for interactive elements */
-    .button, .input, .textarea, a.box {
-      transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out !important;
-    }
-    
-    /* Override any focus rings with more subtle outlines */
-    *:focus {
-      outline: 1px solid rgba(0, 0, 0, 0.1) !important;
-      outline-offset: 1px !important;
-    }
-    
-    /* Refine charts and data visualizations */
-    canvas, svg {
-      filter: none !important;
-    }
-
-    /* Refined table styling for magazine-like appearance */
-    .table {
-      border-collapse: collapse !important;
-      width: 100% !important;
-      margin-bottom: 2rem !important;
-      font-family: 'Inter', sans-serif !important;
-    }
-    
-    .table th {
-      font-weight: 500 !important;
-      color: #666 !important;
-      border-top: none !important;
-      border-left: none !important;
-      border-right: none !important;
-      border-bottom: 1px solid rgba(0,0,0,0.1) !important;
-      padding: 0.75rem 0.5rem !important;
-      font-size: 0.8rem !important;
-      text-transform: uppercase !important;
-      letter-spacing: 0.03em !important;
-    }
-    
-    .table td {
-      padding: 1rem 0.5rem !important;
-      border: none !important;
-      border-bottom: 1px solid rgba(0,0,0,0.04) !important;
-      color: #444 !important;
-      font-size: 0.85rem !important;
-    }
-    
-    .table tr:last-child td {
-      border-bottom: none !important;
-    }
-    
-    /* Remove alternating rows background */
-    .table tr:nth-child(even) {
-      background-color: transparent !important;
-    }
-    
-    /* Add subtle border transitions for interactive elements */
-    .button, .input, .textarea, a.box {
-      transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out !important;
-    }
-    
-    /* Refine charts and data visualizations */
-    canvas, svg {
-      filter: none !important;
-    }
-    
-    /* Responsive annotations - show/hide based on screen size */
-    @media screen and (max-width: 1023px) {
-      .side-annotation {
-        display: none !important;
-      }
-      
-      .downstream-container {
-        padding: 0 !important;
-      }
-      
-      .mobile-annotation {
-        display: block !important;
-      }
-    }
-    
-    @media screen and (min-width: 1024px) {
-      .mobile-annotation {
-        display: none !important;
-      }
-    }
-  </style>
 </head>
 <body>
   <!-- Scroll indicator -->
@@ -241,10 +72,10 @@
             Overview
           </a>
           <a class="navbar-item" href="#model">
-            Model
+            Architecture
           </a>
           <a class="navbar-item" href="#performance">
-            Performance
+            Object Discovery
           </a>
           <a class="navbar-item" href="#visual-grounding">
             Visual Grounding
@@ -261,185 +92,104 @@
   </nav>
 
   <!-- Hero Section - Reducing top/bottom padding -->
-  <section class="hero is-small has-background-gradient">
+  <section class="hero hero-solid">
     <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">CTRL-O: Language-Controllable Object-Centric Visual Representation Learning</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="https://aniket-didolkar.github.io/" target="_blank">Aniket Rajiv Didolkar</a><sup>1,2*</sup>&nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
-              <span class="author-block">
-                <a href="https://zadaianchuk.github.io/" target="_blank">Andrii Zadaianchuk</a><sup>3*†</sup>&nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
-              <span class="author-block">
-                <a href="https://rabiul.me/" target="_blank">Rabiul Awal</a><sup>1,2*</sup>&nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
-              <span class="author-block">
-                <a href="https://www.linkedin.com/in/maximilian-seitzer-85ba41119/" target="_blank">Maximilian Seitzer</a><sup>4</sup>&nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
-              <span class="author-block">
-                <a href="https://ivi.fnwi.uva.nl/vislab/author/efstratios-gavves/" target="_blank">Efstratios Gavves</a><sup>3,5</sup>&nbsp;&nbsp;&nbsp;&nbsp;
-              </span>
-              <span class="author-block">
-                <a href="https://www.iro.umontreal.ca/~agrawal/" target="_blank">Aishwarya Agrawal</a><sup>1,2†</sup>
-              </span>
-            </div>
-
-            <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>Mila - Quebec AI Institute</span>&nbsp;&nbsp;
-              <span class="author-block"><sup>2</sup>Université de Montréal</span>&nbsp;&nbsp;
-              <span class="author-block"><sup>3</sup>University of Amsterdam</span>&nbsp;&nbsp;
-              <span class="author-block"><sup>4</sup> University of Tübingen </span>
-              <span class="author-block"><sup>5</sup> Archimedes/Athena RC, Greece </span>
-            </div>
-            <div class="is-size-6" style="padding-top: 0.5em;">
-              <span class="author-block"><sup>*</sup>Equal contribution. Order determined by flipping a coin.</span>&nbsp;&nbsp;
-              <span class="author-block"><sup>†</sup>Equal advising</span>
-            </div>
-            <div class="publication-venue">
-              <span class="author-block">Published at CVPR 2025</span>
-            </div>
-
-            <div class="column has-text-centered">
-              <div class="publication-links">
-              <!-- CVPR link - To be added later -->
-              <!--
-              <span class="link-block">
-                <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="far fa-circle"></i>
-                  </span>
-                  <span>CVPR</span>
-                </a>
-                &nbsp;
-              </span>
-              -->
-              
-              <!-- PDF link - To be added later -->
-              <!--
-              <span class="link-block">
-                <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>PDF</span>
-                </a>
-                &nbsp;
-              </span>
-              -->                
-
-              <!-- ArXiv abstract Link - To be added later -->
-              <!--
-              <span class="link-block">
-                <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-                &nbsp;
-              </span>
-              -->
-
-              <!-- Github link - To be added later -->
-              <!--
-              <span class="link-block">
-                <a href="#" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="fab fa-github"></i>
-                </span>
-                <span>Code</span>
-                </a>
-                &nbsp;
-              </span>
-              -->
-              <span class="link-block">
-                <a href="static/ctrl-o-paper.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-                &nbsp;
-              </span>
-              <!-- Contact -->
-              <span class="link-block">
-                <a href="mailto:adidolkar123@gmail.com, a.zadaianchuk@uva.nl, awalrabiul6@gmail.com" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="fa fa-envelope"></i>
-                </span>
-                <span>Contact</span>
-                </a>
-              </span>
-            </div>
-          </div>
+      <div class="container hero-container">
+        <h1 class="hero-title">
+          CTRL-O: Language-Controllable Object-Centric Visual Representation Learning
+        </h1>
+        <div class="hero-divider"></div>
+        <div class="hero-authors">
+          <span>
+            <a href="https://aniket-didolkar.github.io/" target="_blank">Aniket Rajiv Didolkar</a><sup>1,2*</sup>
+          </span>
+          <span>
+            <a href="https://zadaianchuk.github.io/" target="_blank">Andrii Zadaianchuk</a><sup>3*†</sup>
+          </span>
+          <span>
+            <a href="https://rabiul.me/" target="_blank">Rabiul Awal</a><sup>1,2*</sup>
+          </span>
+          <span>
+            <a href="https://www.linkedin.com/in/maximilian-seitzer-85ba41119/" target="_blank">Maximilian Seitzer</a><sup>4</sup>
+          </span>
+          <span>
+            <a href="https://ivi.fnwi.uva.nl/vislab/author/efstratios-gavves/" target="_blank">Efstratios Gavves</a><sup>3,5</sup>
+          </span>
+          <span>
+            <a href="https://www.iro.umontreal.ca/~agrawal/" target="_blank">Aishwarya Agrawal</a><sup>1,2†</sup>
+          </span>
+        </div>
+        <div class="hero-affiliations">
+          <span><sup>1</sup>Mila - Quebec AI Institute</span>
+          <span><sup>2</sup>Université de Montréal</span>
+          <span><sup>3</sup>University of Amsterdam</span>
+          <span><sup>4</sup>University of Tübingen</span>
+          <span><sup>5</sup>Archimedes/Athena RC, Greece</span>
+        </div>
+        <div class="hero-notes">
+          <span><sup>*</sup>Equal contribution</span>
+          <span><sup>†</sup>Equal advising</span>
+        </div>
+        <div class="hero-venue">
+          Published at CVPR 2025
+        </div>
+        <div class="hero-buttons">
+          <a href="static/ctrl-o-paper.pdf" target="_blank" class="hero-btn">
+            <i class="fas fa-file-pdf"></i> Paper
+          </a>
+          <a href="mailto:adidolkar123@gmail.com, a.zadaianchuk@uva.nl, awalrabiul6@gmail.com" target="_blank" class="hero-btn">
+            <i class="fa fa-envelope"></i> Contact
+          </a>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Combined Highlights and Approach section - Making more compact -->
-  <section id="highlights" class="section" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+  <section id="highlights" class="section highlights-section">
     <div class="container is-max-desktop">
-      <h2 class="title" style="font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.03em; margin-bottom: 2rem; font-size: 2.2rem; position: relative; text-align: center;">
-        <span style="display: inline-block; position: relative; color: #333; z-index: 1;">
-          <span style="color: #999; font-weight: 300; font-size: 1rem; display: block; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.05em;">Overview</span>
+      <h2 class="title highlights-title">
+        <span class="highlights-title-inner">
+          <span class="highlights-title-label">Overview</span>
           CTRL-O at a Glance
         </span>
       </h2>
-      
-      <!-- Paper highlights with more elegant styling - without green lines -->
-      <div style="margin: 2.5rem 0 3rem; display: flex; gap: 2rem;">
-        <div style="flex: 1;">
-          <h4 style="font-family: 'Inter', sans-serif; font-size: 1.05rem; font-weight: 500; margin-bottom: 0.7rem; color: #333; letter-spacing: -0.01em;"><i class="fas fa-magic" style="color: #777; margin-right: 0.5rem; opacity: 0.7;"></i>Language Control</h4>
-          <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; line-height: 1.5; color: #666; letter-spacing: 0.01em;">Control which objects are represented using natural language queries and referring expressions</p>
+      <div class="paper-highlights-row">
+        <div class="highlight-item">
+          <h4><i class="fas fa-magic highlight-icon"></i>Language Control</h4>
+          <p>Control which objects are represented using natural language queries and referring expressions</p>
         </div>
-        <div style="flex: 1;">
-          <h4 style="font-family: 'Inter', sans-serif; font-size: 1.05rem; font-weight: 500; margin-bottom: 0.7rem; color: #333; letter-spacing: -0.01em;"><i class="fas fa-robot" style="color: #777; margin-right: 0.5rem; opacity: 0.7;"></i>Weak Supervision</h4>
-          <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; line-height: 1.5; color: #666; letter-spacing: 0.01em;">Works without requiring mask supervision, applicable to a wide range of real-world scenarios</p>
+        <div class="highlight-item">
+          <h4><i class="fas fa-robot highlight-icon"></i>Weak Supervision</h4>
+          <p>Works without requiring mask supervision, applicable to a wide range of real-world scenarios</p>
         </div>
-        <div style="flex: 1;">
-          <h4 style="font-family: 'Inter', sans-serif; font-size: 1.05rem; font-weight: 500; margin-bottom: 0.7rem; color: #333; letter-spacing: -0.01em;"><i class="fas fa-brain" style="color: #777; margin-right: 0.5rem; opacity: 0.7;"></i>Multimodal Applications</h4>
-          <p style="font-family: 'Inter', sans-serif; font-size: 0.9rem; line-height: 1.5; color: #666; letter-spacing: 0.01em;">Enables both instance-specific text-to-image generation and visual question answering capabilities</p>
+        <div class="highlight-item">
+          <h4><i class="fas fa-brain highlight-icon"></i>Multimodal Applications</h4>
+          <p>Enables both instance-specific text-to-image generation and visual question answering capabilities</p>
         </div>
       </div>
-      
-      <!-- Comparison diagram -->
-      <figure class="image" style="margin: 1rem 0;">
-        <img src="./static/images/converted_figures/ctrlo_teaser_website.svg" alt="Comparison of Standard OCL vs CTRL-O" style="max-height: 290px; object-fit: contain; width: 100%; border: none; box-shadow: none;" />
-        <figcaption class="has-text-centered" style="margin-top: 0.25rem; font-size: 0.85em; line-height: 1.2;">
+      <figure class="image highlights-figure">
+        <img src="./static/images/converted_figures/ctrlo_teaser_website.svg" alt="Comparison of Standard OCL vs CTRL-O" />
+        <p class="highlights-caption">
           <strong>Left:</strong> Standard object-centric learning assigns arbitrary slots with no semantic labels.
           <strong>Right:</strong> CTRL-O introduces language-based control, enabling specific object targeting and multimodal applications.
-        </figcaption>
+        </p>
       </figure>
     </div>
   </section>
 
   <!-- Paper abstract - More compact -->
-  <section id="abstract" class="section hero is-light" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+  <section id="abstract" class="section hero is-light section-padding">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title" style="font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.03em; margin-bottom: 2rem; font-size: 2.2rem; position: relative;">
-            <span style="display: inline-block; position: relative; color: #333; z-index: 1;">
-              <span style="color: #999; font-weight: 300; font-size: 1rem; display: block; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.05em;">Summary</span>
-              Abstract
-            </span>
-          </h2>
           <div class="abstract-container">
             <div class="content has-text-justified">
               <p>
                 Object-centric representation learning aims to decompose visual scenes into fixed-size vectors called "slots" or "object files", where each slot captures a distinct object. Current state-of-the-art object-centric models have shown remarkable success in object discovery in diverse domains, including complex real-world scenes. However, these models suffer from a key limitation: they lack controllability. Specifically, current object-centric models learn representations based on their preconceived understanding of objects and parts, without allowing user input to guide which objects are represented.
               </p>
               <p>
-                Introducing controllability into object-centric models could unlock a range of useful capabilities, such as the ability to extract instance-specific representations from a scene. In this work, we propose a novel approach for user-directed control over slot representations by conditioning slots on language descriptions. The proposed <strong>Con<span style="text-decoration: underline;">TR</span>o<span style="text-decoration: underline;">L</span>lable <span style="text-decoration: underline;">O</span>bject-centric representation learning</strong> approach, which we term CTRL-O, achieves targeted object-language binding in complex real-world scenes without requiring mask supervision. Next, we apply these controllable slot representations on two downstream vision language tasks: text-to-image generation and visual question answering. We find that the proposed approach enables instance-specific text-to-image generation and also achieves strong performance on visual question answering.
+                Introducing controllability into object-centric models could unlock a range of useful capabilities, such as the ability to extract instance-specific representations from a scene. In this work, we propose a novel approach for user-directed control over slot representations by conditioning slots on language descriptions. The proposed <strong>Con<span class="underline-text">TR</span>o<span class="underline-text">L</span>lable <span class="underline-text">O</span>bject-centric representation learning</strong> approach, which we term CTRL-O, achieves targeted object-language binding in complex real-world scenes without requiring mask supervision. Next, we apply these controllable slot representations on two downstream vision language tasks: text-to-image generation and visual question answering. We find that the proposed approach enables instance-specific text-to-image generation and also achieves strong performance on visual question answering.
               </p>
             </div>
           </div>
@@ -450,132 +200,63 @@
   <!-- End paper abstract -->
 
   <!-- Model section - Refined minimal magazine layout -->
-  <section id="model" class="hero is-small" style="padding-top: 1.5rem; padding-bottom: 1.5rem; background-color: #f9fbfd; overflow: hidden; position: relative;">
-    <!-- Background decorative elements - neutral -->
-    <div style="position: absolute; top: 20%; right: 0; width: 40vw; height: 40vw; max-width: 500px; max-height: 500px; background: radial-gradient(circle, rgba(0,0,0,0.015) 0%, rgba(0,0,0,0) 70%); border-radius: 50%;"></div>
-    <div style="position: absolute; bottom: 10%; left: 0; width: 25vw; height: 25vw; max-width: 300px; max-height: 300px; background: radial-gradient(circle, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0) 70%); border-radius: 50%;"></div>
-    
-    <div class="hero-body" style="padding: 1rem 1.5rem;">
-      <!-- Refined minimal title -->
+  <section id="model" class="hero is-small section-padding">
+    <div class="bg-decoration top-right"></div>
+    <div class="bg-decoration bottom-left"></div>
+    <div class="hero-body">
       <div class="container is-max-desktop">
-        <h2 class="title" style="font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.03em; margin-bottom: 2rem; font-size: 2.2rem; position: relative;">
-          <span style="display: inline-block; position: relative; color: #333; z-index: 1;">
-            <span style="color: #999; font-weight: 300; font-size: 1rem; display: block; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.05em;">Architecture</span>
-            Model Design
-          </span>
-        </h2>
-      </div>
-      
-      <!-- Main layout with side annotations -->
-      <div class="container is-max-desktop" style="position: relative;">
-        <!-- Image with annotations adjacent - top level container -->
-        <div style="position: relative;" class="downstream-container">
-          <!-- Main image -->
-          <figure style="position: relative; z-index: 1; margin-bottom: 5rem; padding: 0 0 2rem 0;">
-            <img src="./static/images/converted_figures/ctrl-o.png" style="width: 85%; max-width: 850px; margin: 0 auto; display: block; border-radius: 1px; box-shadow: none;" alt="CTRL-O model"/>
-            
-            <!-- Elegant caption -->
-            <figcaption style="position: absolute; bottom: 0; right: 7.5%; background-color: white; padding: 0.6rem 1rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; color: #666; letter-spacing: 0.05em; box-shadow: none; border: 1px solid #f0f0f0;">CTRL-O ARCHITECTURE</figcaption>
-            
-            <!-- Key point annotations directly on the sides - hidden on mobile -->
-            <!-- Language Control annotation - Left side -->
-            <div class="side-annotation" style="position: absolute; top: 20%; left: -4rem; width: 9rem; text-align: right;">
-              <h5 style="font-family: 'Inter', sans-serif; font-size: 1.15rem; font-weight: 600; margin-bottom: 0.6rem; color: #333; letter-spacing: -0.01em; line-height: 1.3;">
-                Language Control 
-                <span style="display: inline-block; margin-left: 0.3rem; color: #bbb; font-weight: 400; font-size: 0.75rem;">01</span>
-              </h5>
-              <p style="font-family: 'Inter', sans-serif; font-size: 0.85rem; line-height: 1.6; color: #666; letter-spacing: 0.01em;">
-                Control queries guide the slot attention process
-              </p>
-              <!-- Connecting line -->
-              <div style="position: absolute; top: 50%; right: -0.5rem; width: 0.8rem; height: 1px; background-color: rgba(0,0,0,0.1);"></div>
-            </div>
-            
-            <!-- Slot Attention annotation - Right side -->
-            <div class="side-annotation" style="position: absolute; top: 30%; right: -4.5rem; width: 9.5rem; text-align: left;">
-              <h5 style="font-family: 'Inter', sans-serif; font-size: 1.15rem; font-weight: 600; margin-bottom: 0.6rem; color: #333; letter-spacing: -0.01em; line-height: 1.3;">
-                <span style="display: inline-block; margin-right: 0.3rem; color: #bbb; font-weight: 400; font-size: 0.75rem;">02</span>
-                Slot Attention Module
-              </h5>
-              <p style="font-family: 'Inter', sans-serif; font-size: 0.85rem; line-height: 1.6; color: #666; letter-spacing: 0.01em;">
-                Features group into object-centric slots
-              </p>
-              <!-- Connecting line -->
-              <div style="position: absolute; top: 50%; left: -0.5rem; width: 0.8rem; height: 1px; background-color: rgba(0,0,0,0.1);"></div>
-            </div>
-            
-            <!-- Contrastive Loss annotation - Lower right -->
-            <div class="side-annotation" style="position: absolute; bottom: 15%; right: -4.5rem; width: 9.5rem; text-align: left;">
-              <h5 style="font-family: 'Inter', sans-serif; font-size: 1.15rem; font-weight: 600; margin-bottom: 0.6rem; color: #333; letter-spacing: -0.01em; line-height: 1.3;">
-                <span style="display: inline-block; margin-right: 0.3rem; color: #bbb; font-weight: 400; font-size: 0.75rem;">03</span>
-                Contrastive Loss
-              </h5>
-              <p style="font-family: 'Inter', sans-serif; font-size: 0.85rem; line-height: 1.6; color: #666; letter-spacing: 0.01em;">
-                Binds queries to visual objects
-              </p>
-              <!-- Connecting line -->
-              <div style="position: absolute; top: 50%; left: -0.5rem; width: 0.8rem; height: 1px; background-color: rgba(0,0,0,0.1);"></div>
-            </div>
-            
-            <!-- Mobile-only annotation (simplified) -->
-            <div class="mobile-annotation" style="display: none; margin-top: 1.5rem;">
-              <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
-                <span style="display: inline-block; min-width: 1.5rem; height: 1.5rem; border-radius: 50%; background-color: #f5f5f5; color: #999; text-align: center; line-height: 1.5rem; font-size: 0.7rem;">01</span>
-                <div>
-                  <h5 style="font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem; color: #333;">Language Control</h5>
-                  <p style="font-family: 'Inter', sans-serif; font-size: 0.8rem; margin: 0; color: #666;">Control queries guide the slot attention process</p>
-                </div>
+        <div class="carded-section">
+          <h2 class="title inter-title carded-section-title">
+            <span class="title-wrapper">
+              <span class="title-label">Architecture</span>
+              CTRL-O
+            </span>
+          </h2>
+          <div class="content has-text-justified content-spacing carded-section-text">
+            <figure class="model-figure">
+              <img src="./static/images/converted_figures/ctrl-o.png" alt="CTRL-O model"/>
+              <figcaption class="has-text-centered mt-2 is-size-7">CTRL-O ARCHITECTURE</figcaption>
+            </figure>
+            <div class="model-annotations-flex mt-4">
+              <div class="has-text-centered model-annotation-col">
+                <h5 class="is-size-5 mb-2">Language Control</h5>
+                <p class="has-text-grey">Control queries guide the slot attention process</p>
               </div>
-              <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
-                <span style="display: inline-block; min-width: 1.5rem; height: 1.5rem; border-radius: 50%; background-color: #f5f5f5; color: #999; text-align: center; line-height: 1.5rem; font-size: 0.7rem;">02</span>
-                <div>
-                  <h5 style="font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem; color: #333;">Slot Attention Module</h5>
-                  <p style="font-family: 'Inter', sans-serif; font-size: 0.8rem; margin: 0; color: #666;">Features group into object-centric slots</p>
-                </div>
+              <div class="has-text-centered model-annotation-col">
+                <h5 class="is-size-5 mb-2">Slot Attention Module</h5>
+                <p class="has-text-grey">Features group into object-centric slots</p>
               </div>
-              <div style="display: flex; gap: 1rem; align-items: center;">
-                <span style="display: inline-block; min-width: 1.5rem; height: 1.5rem; border-radius: 50%; background-color: #f5f5f5; color: #999; text-align: center; line-height: 1.5rem; font-size: 0.7rem;">03</span>
-                <div>
-                  <h5 style="font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem; color: #333;">Contrastive Loss</h5>
-                  <p style="font-family: 'Inter', sans-serif; font-size: 0.8rem; margin: 0; color: #666;">Binds queries to visual objects</p>
-                </div>
+              <div class="has-text-centered model-annotation-col">
+                <h5 class="is-size-5 mb-2">Contrastive Loss</h5>
+                <p class="has-text-grey">Binds queries to visual objects</p>
               </div>
             </div>
-          </figure>
-        </div>
-        
-        <!-- Editorial callout quote -->
-        <div style="margin: 4rem auto 0; max-width: 70%; position: relative;">
-          <div style="position: absolute; top: 0; left: 0; font-family: Georgia, serif; font-size: 3.5rem; line-height: 0; color: rgba(180,180,180,0.3); margin-top: -1rem; margin-left: -2rem;">"</div>
-          <p style="font-family: 'Inter', sans-serif; font-size: 1.15rem; line-height: 1.7; color: #666; font-weight: 300; letter-spacing: 0.01em; text-align: center; font-style: italic;">
-            CTRL-O transforms visual features into language-controllable object-centric representations, 
-            enabling precise binding between language descriptions and specific objects in complex scenes.
-          </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Ablation and Performance Results Section - More compact layout -->
-  <section id="performance" class="hero is-small" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
-    <div class="hero-body" style="padding: 1rem 1.5rem;">
+  <section id="performance" class="hero is-small section-padding">
+    <div class="hero-body">
       <div class="container is-max-desktop">
-        <h2 class="title" style="font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.03em; margin-bottom: 2rem; font-size: 2.2rem; position: relative;">
-          <span style="display: inline-block; position: relative; color: #333; z-index: 1;">
-            <span style="color: #999; font-weight: 300; font-size: 1rem; display: block; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.05em;">Evaluation</span>
-            Model Performance Results
+        <h2 class="title inter-title">
+          <span class="title-wrapper">
+            <span class="title-label">Evaluation</span>
+            Object Discovery Results
           </span>
         </h2>
-        <div class="content has-text-justified" style="margin-bottom: 0.75rem;">
+        <div class="content has-text-justified content-spacing">
           <p>Our evaluation shows that CTRL-O significantly outperforms existing approaches and benefits from key architectural components.</p>
         </div>
 
-        <div style="margin-bottom: 3rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(0,0,0,0.04);">
+        <div class="section-spacing">
           <div class="columns is-multiline">
             <!-- Component Ablation Table -->
             <div class="column is-6">
               <h3 class="title is-5 mb-3"><i class="fas fa-puzzle-piece"></i> Component Ablation Analysis</h3>
-              <div class="table-container" style="margin-bottom: 0.5rem;">
+              <div class="table-container">
                 <table class="table is-fullwidth is-size-7">
                   <thead>
                     <tr>
@@ -590,49 +271,49 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td><i class="fas fa-check" style="color: green;"></i></td>
-                      <td><i class="fas fa-check" style="color: green;"></i></td>
-                      <td><i class="fas fa-times" style="color: #db4437;"></i></td>
-                      <td><i class="fas fa-times" style="color: #db4437;"></i></td>
-                      <td class="has-text-centered">71.2</td>
-                      <td class="has-text-centered">69.8</td>
-                      <td class="has-text-centered">35.4</td>
+                      <td><i class="fas fa-check table-icon-success"></i></td>
+                      <td><i class="fas fa-check table-icon-success"></i></td>
+                      <td><i class="fas fa-times table-icon-error"></i></td>
+                      <td><i class="fas fa-times table-icon-error"></i></td>
+                      <td class="table-cell-centered">71.2</td>
+                      <td class="table-cell-centered">69.8</td>
+                      <td class="table-cell-centered">35.4</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-check" style="color: green;"></i></td>
-                      <td><i class="fas fa-times" style="color: #db4437;"></i></td>
-                      <td><i class="fas fa-times" style="color: #db4437;"></i></td>
-                      <td><i class="fas fa-times" style="color: #db4437;"></i></td>
-                      <td class="has-text-centered">8.1</td>
-                      <td class="has-text-centered">34.52</td>
-                      <td class="has-text-centered">22.42</td>
+                      <td><i class="fas fa-check table-icon-success"></i></td>
+                      <td><i class="fas fa-times table-icon-error"></i></td>
+                      <td><i class="fas fa-times table-icon-error"></i></td>
+                      <td><i class="fas fa-times table-icon-error"></i></td>
+                      <td class="table-cell-centered">8.1</td>
+                      <td class="table-cell-centered">34.52</td>
+                      <td class="table-cell-centered">22.42</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-check" style="color: green;"></i></td>
-                      <td><i class="fas fa-times" style="color: #db4437;"></i></td>
-                      <td><i class="fas fa-times" style="color: #db4437;"></i></td>
-                      <td><i class="fas fa-check" style="color: green;"></i></td>
-                      <td class="has-text-centered">10.11</td>
-                      <td class="has-text-centered">43.83</td>
-                      <td class="has-text-centered">25.76</td>
+                      <td><i class="fas fa-check table-icon-success"></i></td>
+                      <td><i class="fas fa-times table-icon-error"></i></td>
+                      <td><i class="fas fa-times table-icon-error"></i></td>
+                      <td><i class="fas fa-check table-icon-success"></i></td>
+                      <td class="table-cell-centered">10.11</td>
+                      <td class="table-cell-centered">43.83</td>
+                      <td class="table-cell-centered">25.76</td>
                     </tr>
                     <tr>
-                      <td><i class="fas fa-check" style="color: green;"></i></td>
-                      <td><i class="fas fa-times" style="color: #db4437;"></i></td>
-                      <td><i class="fas fa-check" style="color: green;"></i></td>
-                      <td><i class="fas fa-times" style="color: #db4437;"></i></td>
-                      <td class="has-text-centered">56.3</td>
-                      <td class="has-text-centered">44.8</td>
-                      <td class="has-text-centered">27.3</td>
+                      <td><i class="fas fa-check table-icon-success"></i></td>
+                      <td><i class="fas fa-times table-icon-error"></i></td>
+                      <td><i class="fas fa-check table-icon-success"></i></td>
+                      <td><i class="fas fa-times table-icon-error"></i></td>
+                      <td class="table-cell-centered">56.3</td>
+                      <td class="table-cell-centered">44.8</td>
+                      <td class="table-cell-centered">27.3</td>
                     </tr>
-                    <tr class="is-selected">
-                      <td><i class="fas fa-check" style="color: green;"></i></td>
-                      <td><i class="fas fa-times" style="color: #db4437;"></i></td>
-                      <td><i class="fas fa-check" style="color: green;"></i></td>
-                      <td><i class="fas fa-check" style="color: green;"></i></td>
-                      <td class="has-text-centered has-text-weight-bold" style="background-color: rgba(50, 115, 220, 0.1);">61.3</td>
-                      <td class="has-text-centered has-text-weight-bold" style="background-color: rgba(50, 115, 220, 0.1);">47.5</td>
-                      <td class="has-text-centered has-text-weight-bold" style="background-color: rgba(50, 115, 220, 0.1);">27.2</td>
+                    <tr class="table-cell-selected">
+                      <td><i class="fas fa-check table-icon-success"></i></td>
+                      <td><i class="fas fa-times table-icon-error"></i></td>
+                      <td><i class="fas fa-check table-icon-success"></i></td>
+                      <td><i class="fas fa-check table-icon-success"></i></td>
+                      <td class="table-cell-centered table-cell-bold table-highlight-cell">61.3</td>
+                      <td class="table-cell-centered table-cell-bold table-highlight-cell">47.5</td>
+                      <td class="table-cell-centered table-cell-bold table-highlight-cell">27.2</td>
                     </tr>
                   </tbody>
                 </table>
@@ -657,34 +338,34 @@
                     <tr>
                       <td rowspan="4" class="has-text-weight-semibold">Unsupervised</td>
                       <td>DINOSAUR (MLP Dec.)</td>
-                      <td class="has-text-centered">40.5</td>
-                      <td class="has-text-centered">27.7</td>
+                      <td class="table-cell-centered">40.5</td>
+                      <td class="table-cell-centered">27.7</td>
                     </tr>
                     <tr>
                       <td>DINOSAUR (TF. Dec.)</td>
-                      <td class="has-text-centered">34.1</td>
-                      <td class="has-text-centered">31.6</td>
+                      <td class="table-cell-centered">34.1</td>
+                      <td class="table-cell-centered">31.6</td>
                     </tr>
                     <tr>
                       <td>Stable-LSD</td>
-                      <td class="has-text-centered">35.0</td>
-                      <td class="has-text-centered">30.4</td>
+                      <td class="table-cell-centered">35.0</td>
+                      <td class="table-cell-centered">30.4</td>
                     </tr>
                     <tr>
                       <td>SlotDiffusion</td>
-                      <td class="has-text-centered">37.3</td>
-                      <td class="has-text-centered">31.4</td>
+                      <td class="table-cell-centered">37.3</td>
+                      <td class="table-cell-centered">31.4</td>
                     </tr>
                     <tr>
                       <td rowspan="2" class="has-text-weight-semibold">Weak Supervision</td>
                       <td>Stable-LSD (Bbox Supervision)</td>
-                      <td class="has-text-centered">-</td>
-                      <td class="has-text-centered">30.3</td>
+                      <td class="table-cell-centered">-</td>
+                      <td class="table-cell-centered">30.3</td>
                     </tr>
-                    <tr class="is-selected">
+                    <tr class="table-cell-selected">
                       <td class="has-text-weight-semibold">CTRL-O (Trained on COCO)</td>
-                      <td class="has-text-centered has-text-weight-bold" style="background-color: rgba(50, 115, 220, 0.1);">47.5</td>
-                      <td class="has-text-centered has-text-weight-bold" style="background-color: rgba(50, 115, 220, 0.1);">27.2</td>
+                      <td class="table-cell-centered table-cell-bold table-highlight-cell">47.5</td>
+                      <td class="table-cell-centered table-cell-bold table-highlight-cell">27.2</td>
                     </tr>
                   </tbody>
                 </table>
@@ -698,12 +379,12 @@
   </section>
 
   <!-- Visual grounding section - More compact -->
-  <section id="visual-grounding" class="hero is-small" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
-    <div class="hero-body" style="padding: 1rem 1.5rem;">
+  <section id="visual-grounding" class="hero is-small section-padding">
+    <div class="hero-body">
       <div class="container is-max-desktop">
-        <h2 class="title" style="font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.03em; margin-bottom: 2rem; font-size: 2.2rem; position: relative;">
-          <span style="display: inline-block; position: relative; color: #333; z-index: 1;">
-            <span style="color: #999; font-weight: 300; font-size: 1rem; display: block; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.05em;">Results</span>
+        <h2 class="title inter-title">
+          <span class="title-wrapper">
+            <span class="title-label">Results</span>
             Visual Grounding with Language Queries
           </span>
         </h2>
@@ -716,12 +397,14 @@
           <div class="columns is-multiline">
             <div class="column is-12 mb-4">
               <h3 class="title is-5 mb-3"><i class="fas fa-images"></i> Visual Grounding Examples</h3>
-              <figure class="image">
-                <img src="./static/images/converted_figures/vg_demo.png" alt="CTRL-O visual grounding example"/>
-                <figcaption class="has-text-centered mt-2 is-size-7">
-                  CTRL-O is able to bind language queries to specific objects in complex scenes and infers object-centric representations of corresponding objects.
-                </figcaption>
-              </figure>
+              <div class="figure-center">
+                <figure class="image">
+                  <img src="./static/images/converted_figures/vg_demo.png" alt="CTRL-O visual grounding example"/>
+                  <figcaption class="figure-caption">
+                    CTRL-O is able to bind language queries to specific objects in complex scenes and infers object-centric representations of corresponding objects.
+                  </figcaption>
+                </figure>
+              </div>
             </div>
             
             <!-- Visual Grounding Performance Table -->
@@ -757,94 +440,94 @@
                   <tbody>
                     <tr>
                       <td>GroupViT</td>
-                      <td class="has-text-centered">T</td>
+                      <td class="table-cell-centered">T</td>
                       <td>CC12M+YFCC</td>
-                      <td class="has-text-centered"><i class="fas fa-times" style="color: #db4437;"></i></td>
-                      <td class="has-text-centered">7.99</td>
-                      <td class="has-text-centered">6.16</td>
-                      <td class="has-text-centered">10.51</td>
-                      <td class="has-text-centered">8.49</td>
-                      <td class="has-text-centered">6.79</td>
-                      <td class="has-text-centered">10.59</td>
-                      <td class="has-text-centered">10.68</td>
+                      <td class="table-cell-centered"><i class="fas fa-times table-icon-error"></i></td>
+                      <td class="table-cell-centered">7.99</td>
+                      <td class="table-cell-centered">6.16</td>
+                      <td class="table-cell-centered">10.51</td>
+                      <td class="table-cell-centered">8.49</td>
+                      <td class="table-cell-centered">6.79</td>
+                      <td class="table-cell-centered">10.59</td>
+                      <td class="table-cell-centered">10.68</td>
                     </tr>
                     <tr>
                       <td>GroupViT</td>
-                      <td class="has-text-centered">T</td>
+                      <td class="table-cell-centered">T</td>
                       <td>CC12M+YFCC</td>
-                      <td class="has-text-centered"><i class="fas fa-check" style="color: green;"></i></td>
-                      <td class="has-text-centered">10.82</td>
-                      <td class="has-text-centered">11.11</td>
-                      <td class="has-text-centered">11.29</td>
-                      <td class="has-text-centered">11.14</td>
-                      <td class="has-text-centered">10.78</td>
-                      <td class="has-text-centered">11.84</td>
-                      <td class="has-text-centered">12.77</td>
+                      <td class="table-cell-centered"><i class="fas fa-check table-icon-success"></i></td>
+                      <td class="table-cell-centered">10.82</td>
+                      <td class="table-cell-centered">11.11</td>
+                      <td class="table-cell-centered">11.29</td>
+                      <td class="table-cell-centered">11.14</td>
+                      <td class="table-cell-centered">10.78</td>
+                      <td class="table-cell-centered">11.84</td>
+                      <td class="table-cell-centered">12.77</td>
                     </tr>
                     <tr>
                       <td>MaskCLIP</td>
-                      <td class="has-text-centered">T</td>
+                      <td class="table-cell-centered">T</td>
                       <td>WIT</td>
-                      <td class="has-text-centered"><i class="fas fa-times" style="color: #db4437;"></i></td>
-                      <td class="has-text-centered">11.52</td>
-                      <td class="has-text-centered">11.85</td>
-                      <td class="has-text-centered">12.06</td>
-                      <td class="has-text-centered">11.87</td>
-                      <td class="has-text-centered">12.01</td>
-                      <td class="has-text-centered">12.57</td>
-                      <td class="has-text-centered">12.74</td>
+                      <td class="table-cell-centered"><i class="fas fa-times table-icon-error"></i></td>
+                      <td class="table-cell-centered">11.52</td>
+                      <td class="table-cell-centered">11.85</td>
+                      <td class="table-cell-centered">12.06</td>
+                      <td class="table-cell-centered">11.87</td>
+                      <td class="table-cell-centered">12.01</td>
+                      <td class="table-cell-centered">12.57</td>
+                      <td class="table-cell-centered">12.74</td>
                     </tr>
                     <tr>
                       <td>MaskCLIP</td>
-                      <td class="has-text-centered">T</td>
+                      <td class="table-cell-centered">T</td>
                       <td>WIT</td>
-                      <td class="has-text-centered"><i class="fas fa-check" style="color: green;"></i></td>
-                      <td class="has-text-centered">19.45</td>
-                      <td class="has-text-centered">18.69</td>
-                      <td class="has-text-centered">21.37</td>
-                      <td class="has-text-centered">19.97</td>
-                      <td class="has-text-centered">18.93</td>
-                      <td class="has-text-centered">21.48</td>
-                      <td class="has-text-centered">21.11</td>
+                      <td class="table-cell-centered"><i class="fas fa-check table-icon-success"></i></td>
+                      <td class="table-cell-centered">19.45</td>
+                      <td class="table-cell-centered">18.69</td>
+                      <td class="table-cell-centered">21.37</td>
+                      <td class="table-cell-centered">19.97</td>
+                      <td class="table-cell-centered">18.93</td>
+                      <td class="table-cell-centered">21.48</td>
+                      <td class="table-cell-centered">21.11</td>
                     </tr>
                     <tr>
                       <td>Shatter & Gather</td>
-                      <td class="has-text-centered">T</td>
+                      <td class="table-cell-centered">T</td>
                       <td>VG</td>
-                      <td class="has-text-centered"><i class="fas fa-times" style="color: #db4437;"></i></td>
-                      <td class="has-text-centered">21.80</td>
-                      <td class="has-text-centered">19.00</td>
-                      <td class="has-text-centered">24.96</td>
-                      <td class="has-text-centered">22.20</td>
-                      <td class="has-text-centered">19.86</td>
-                      <td class="has-text-centered" style="background-color: rgba(50, 115, 220, 0.1);">24.85</td>
-                      <td class="has-text-centered">25.89</td>
+                      <td class="table-cell-centered"><i class="fas fa-times table-icon-error"></i></td>
+                      <td class="table-cell-centered">21.80</td>
+                      <td class="table-cell-centered">19.00</td>
+                      <td class="table-cell-centered">24.96</td>
+                      <td class="table-cell-centered">22.20</td>
+                      <td class="table-cell-centered">19.86</td>
+                      <td class="table-cell-centered table-highlight-cell">24.85</td>
+                      <td class="table-cell-centered">25.89</td>
                     </tr>
                     <tr>
                       <td>CTRL-O</td>
-                      <td class="has-text-centered">T</td>
+                      <td class="table-cell-centered">T</td>
                       <td>VG</td>
-                      <td class="has-text-centered"><i class="fas fa-times" style="color: #db4437;"></i></td>
-                      <td class="has-text-centered">21.80</td>
-                      <td class="has-text-centered">20.10</td>
-                      <td class="has-text-centered">21.57</td>
-                      <td class="has-text-centered">21.90</td>
-                      <td class="has-text-centered">21.54</td>
-                      <td class="has-text-centered">21.36</td>
-                      <td class="has-text-centered">25.32</td>
+                      <td class="table-cell-centered"><i class="fas fa-times table-icon-error"></i></td>
+                      <td class="table-cell-centered">21.80</td>
+                      <td class="table-cell-centered">20.10</td>
+                      <td class="table-cell-centered">21.57</td>
+                      <td class="table-cell-centered">21.90</td>
+                      <td class="table-cell-centered">21.54</td>
+                      <td class="table-cell-centered">21.36</td>
+                      <td class="table-cell-centered">25.32</td>
                     </tr>
-                    <tr class="is-selected">
+                    <tr class="table-cell-selected">
                       <td>CTRL-O</td>
-                      <td class="has-text-centered">T+P</td>
+                      <td class="table-cell-centered">T+P</td>
                       <td>VG</td>
-                      <td class="has-text-centered"><i class="fas fa-times" style="color: #db4437;"></i></td>
-                      <td class="has-text-centered has-text-weight-bold" style="background-color: rgba(50, 115, 220, 0.1);">28.2</td>
-                      <td class="has-text-centered has-text-weight-bold" style="background-color: rgba(50, 115, 220, 0.1);">33.13</td>
-                      <td class="has-text-centered has-text-weight-bold" style="background-color: rgba(50, 115, 220, 0.1);">27.05</td>
-                      <td class="has-text-centered has-text-weight-bold" style="background-color: rgba(50, 115, 220, 0.1);">25.87</td>
-                      <td class="has-text-centered has-text-weight-bold" style="background-color: rgba(50, 115, 220, 0.1);">30.58</td>
-                      <td class="has-text-centered">22.58</td>
-                      <td class="has-text-centered has-text-weight-bold" style="background-color: rgba(50, 115, 220, 0.1);">30.50</td>
+                      <td class="table-cell-centered"><i class="fas fa-times table-icon-error"></i></td>
+                      <td class="table-cell-centered table-cell-bold table-highlight-cell">28.2</td>
+                      <td class="table-cell-centered table-cell-bold table-highlight-cell">33.13</td>
+                      <td class="table-cell-centered table-cell-bold table-highlight-cell">27.05</td>
+                      <td class="table-cell-centered table-cell-bold table-highlight-cell">25.87</td>
+                      <td class="table-cell-centered table-cell-bold table-highlight-cell">30.58</td>
+                      <td class="table-cell-centered">22.58</td>
+                      <td class="table-cell-centered table-cell-bold table-highlight-cell">30.50</td>
                     </tr>
                   </tbody>
                 </table>
@@ -859,107 +542,63 @@
   </section>
 
   <!-- Downstream section - More compact and streamlined -->
-  <section id="downstream" class="hero is-small" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
-    <div class="hero-body" style="padding: 1rem 1.5rem;">
+  <section id="downstream" class="hero is-small section-padding">
+    <div class="hero-body">
       <div class="container is-max-desktop">
-        <h2 class="title" style="font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.03em; margin-bottom: 2rem; font-size: 2.2rem; position: relative;">
-          <span style="display: inline-block; position: relative; color: #333; z-index: 1;">
-            <span style="color: #999; font-weight: 300; font-size: 1rem; display: block; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.05em;">Applications</span>
-            Downstream Applications
-          </span>
-        </h2>
-        <div class="content has-text-justified" style="margin-bottom: 0.75rem;">
-          <p>CTRL-O enables powerful downstream applications by providing controllable object-centric representations.</p>
-        </div>
-        
-        <div style="margin-bottom: 3rem;">
-          <!-- Overview section -->
-          <div class="columns">
-            <div class="column is-12">
-              <h3 class="title is-5 mb-3" style="font-family: 'Inter', sans-serif; font-weight: 600;"><i class="fas fa-project-diagram"></i> Overview of CTRL-O Downstream Tasks</h3>
-              
-              <!-- Container with relative positioning to allow for side annotations -->
-              <div style="position: relative; display: flex; justify-content: center; padding: 0 12rem; margin-bottom: 3rem;" class="downstream-container">
-                <!-- Left side annotation - Text-to-Image Generation -->
-                <div class="side-annotation" style="position: absolute; top: 35%; left: 0; width: 10rem; text-align: right;">
-                  <h5 style="font-family: 'Inter', sans-serif; font-size: 1.15rem; font-weight: 600; margin-bottom: 0.6rem; color: #333; letter-spacing: -0.01em; line-height: 1.3;">
-                    <span style="display: inline-block; margin-left: 0.3rem; color: #bbb; font-weight: 400; font-size: 0.75rem;">a</span> 
-                    T2I Generation
-                  </h5>
-                  <p style="font-family: 'Inter', sans-serif; font-size: 0.85rem; line-height: 1.6; color: #666; letter-spacing: 0.01em;">
-                    Instance-specific text-to-image generation with context preservation
-                  </p>
-                  <!-- Connecting line -->
-                  <div style="position: absolute; top: 50%; right: -1.5rem; width: 1.5rem; height: 1px; background-color: rgba(0,0,0,0.1);"></div>
-                </div>
-
-                <!-- Main image -->
-                <figure style="position: relative; margin: 0; padding-bottom: 2rem; display: inline-block;">
-                  <img src="./static/images/converted_figures/downstream_demo.png" alt="CTRL-O multimodal applications" style="width: 100%; max-width: 800px; border-radius: 1px; box-shadow: none;"/>
-                  
-                  <!-- Elegant caption -->
-                  <figcaption style="position: absolute; bottom: 0; right: 0; background-color: white; padding: 0.6rem 1rem; font-family: 'Inter', sans-serif; font-size: 0.7rem; color: #666; letter-spacing: 0.05em; box-shadow: none; border: 1px solid #f0f0f0;">DOWNSTREAM APPLICATIONS</figcaption>
+        <div class="carded-section">
+          <h2 class="title inter-title carded-section-title">
+            <span class="title-wrapper">
+              <span class="title-label">Applications</span>
+              Downstream Applications
+            </span>
+          </h2>
+          <div class="content has-text-justified carded-section-text" style="margin-bottom: 0.75rem;">
+            <p>CTRL-O enables powerful downstream applications by providing controllable object-centric representations.</p>
+          </div>
+          <div style="margin-bottom: 3rem;">
+            <!-- Overview section -->
+            <div class="columns">
+              <div class="column is-12">
+                <h3 class="title is-5 mb-3"><i class="fas fa-project-diagram"></i> Overview of CTRL-O Downstream Tasks</h3>
+                <figure>
+                  <img src="./static/images/converted_figures/ctrlo-downsteam-apps.png" alt="CTRL-O multimodal applications" class="is-block mx-auto"/>
+                  <figcaption class="has-text-centered mt-2 is-size-7">DOWNSTREAM APPLICATIONS</figcaption>
                 </figure>
-                
-                <!-- Right side annotation - Visual Question Answering -->
-                <div class="side-annotation" style="position: absolute; top: 35%; right: 0; width: 10rem; text-align: left;">
-                  <h5 style="font-family: 'Inter', sans-serif; font-size: 1.15rem; font-weight: 600; margin-bottom: 0.6rem; color: #333; letter-spacing: -0.01em; line-height: 1.3;">
-                    <span style="display: inline-block; margin-right: 0.3rem; color: #bbb; font-weight: 400; font-size: 0.75rem;">b</span>
-                    Visual QA
-                  </h5>
-                  <p style="font-family: 'Inter', sans-serif; font-size: 0.85rem; line-height: 1.6; color: #666; letter-spacing: 0.01em;">
-                    Language-object binding for precise query answering
-                  </p>
-                  <!-- Connecting line -->
-                  <div style="position: absolute; top: 50%; left: -1.5rem; width: 1.5rem; height: 1px; background-color: rgba(0,0,0,0.1);"></div>
-                </div>
-                
-                <!-- Mobile-only annotation -->
-                <div class="mobile-annotation" style="display: none; margin-top: 1.5rem;">
-                  <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
-                    <span style="display: inline-block; min-width: 1.5rem; height: 1.5rem; border-radius: 50%; background-color: #f5f5f5; color: #999; text-align: center; line-height: 1.5rem; font-size: 0.7rem;">a</span>
-                    <div>
-                      <h5 style="font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem; color: #333;">T2I Generation</h5>
-                      <p style="font-family: 'Inter', sans-serif; font-size: 0.8rem; margin: 0; color: #666;">Instance-specific text-to-image generation with context preservation</p>
-                    </div>
+                <div class="downstream-annotations-flex mt-4">
+                  <div class="has-text-centered annotation-ab">
+                    <h5 class="is-size-5 mb-2">T2I Generation</h5>
+                    <p class="has-text-grey">Instance-specific text-to-image generation with context preservation</p>
                   </div>
-                  <div style="display: flex; gap: 1rem; margin-bottom: 1rem; align-items: center;">
-                    <span style="display: inline-block; min-width: 1.5rem; height: 1.5rem; border-radius: 50%; background-color: #f5f5f5; color: #999; text-align: center; line-height: 1.5rem; font-size: 0.7rem;">b</span>
-                    <div>
-                      <h5 style="font-family: 'Inter', sans-serif; font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem; color: #333;">Visual QA</h5>
-                      <p style="font-family: 'Inter', sans-serif; font-size: 0.8rem; margin: 0; color: #666;">Language-object binding for precise query answering</p>
-                    </div>
+                  <div class="has-text-centered annotation-ab">
+                    <h5 class="is-size-5 mb-2">Visual QA</h5>
+                    <p class="has-text-grey">Language-object binding for precise query answering</p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          
-          <!-- Text-to-Image generation - Full width -->
-          <div class="columns mt-5">
-            <div class="column is-12">
-              <h3 class="title is-5 mb-3" style="font-family: 'Inter', sans-serif; font-weight: 600;"><i class="fas fa-images"></i> Instance-Controllable T2I</h3>
-              <figure class="image">
-                <img src="./static/images/converted_figures/t2i_demo.svg" alt="CTRL-O instance-controllable text-to-image generation" style="width: 100%;"/>
-                <figcaption class="has-text-centered mt-2 is-size-7">
-                  Instance-specific control over text-to-image generation while maintaining scene context. CTRL-O enables targeted modification of specific objects while preserving the surrounding scene details.
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-          
-          <!-- Visual Question Answering - Full width but more compact -->
-          <div class="columns mt-4">
-            <div class="column is-12">
-              <h3 class="title is-5 mb-2"><i class="fas fa-question-circle"></i> Visual Question Answering</h3>
-              <div style="display: flex; justify-content: center;">
-                <div class="vqa-chart-container" style="position: relative; height: 250px; width: 90%; max-width: 600px;">
-                  <canvas id="vqaChart"></canvas>
+            
+            <!-- Text-to-Image generation - Full width -->
+            <div class="columns mt-5">
+              <div class="column is-12">
+                <h3 class="title is-5 mb-3" style="font-family: 'Inter', sans-serif; font-weight: 600;"><i class="fas fa-images"></i> Instance-Controllable T2I</h3>
+                <p class="mb-3">Instance-specific control over text-to-image generation while maintaining scene context. CTRL-O enables targeted modification of specific objects while preserving the surrounding scene details.</p>
+                <div class="figure-center">
+                  <figure class="image">
+                    <img src="./static/images/converted_figures/t2i_demo.png" alt="CTRL-O instance-controllable text-to-image generation" class="is-block mx-auto"/>
+                  </figure>
                 </div>
               </div>
-              <p class="is-size-7 has-text-centered mt-2">
-                CTRL-O achieves the highest accuracy on VQAv2 in both No-Coupling and Coupling settings, outperforming baseline models.
-              </p>
+            </div>
+            
+            <!-- Visual Question Answering - Full width but more compact -->
+            <div class="columns mt-4">
+              <div class="column is-12">
+                <h3 class="title is-5 mb-2"><i class="fas fa-question-circle"></i> Visual Question Answering</h3>
+                <p>CTRL-O achieves the highest accuracy on VQAv2 in both No-Coupling and Coupling settings, outperforming baseline models.</p>
+                <div class="vqa-chart-container">
+                  <canvas id="vqaChart" height="320"></canvas>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -967,24 +606,66 @@
     </div>
   </section>
 
+  <!-- Related Work section -->
+  <section id="related-work" class="hero is-small section-padding">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title inter-title">
+          <span class="title-wrapper">
+            <span class="title-label">Related Work</span>
+            Previous Publications
+          </span>
+        </h2>
+        <div class="related-work-grid">
+          <a href="https://dinosaur-paper.github.io/" target="_blank" class="related-work-item">
+            <div class="related-work-image">
+              <img src="https://dinosaur-paper.github.io/static/images/model.png" alt="DINOSAUR Model Architecture" />
+            </div>
+            <div class="related-work-content">
+              <h4>DINOSAUR</h4>
+              <p>Bridging the Gap to Real-World Object-Centric Learning</p>
+              <div class="related-work-meta">
+                <span class="venue">ICLR 2023</span>
+                <span class="authors">Seitzer et al.</span>
+              </div>
+            </div>
+          </a>
+          <a href="https://openreview.net/forum?id=bSq0XGS3kW" target="_blank" class="related-work-item">
+            <div class="related-work-image">
+              <img src="https://rw-ocrl.github.io/ftdinosaur-paper/static/images/model.jpg" alt="Transfer Learning Model Architecture" />
+            </div>
+            <div class="related-work-content">
+              <h4>On the Transfer of Object-Centric Representation Learning</h4>
+              <p>Exploring transferability of object-centric representations across domains with a novel fine-tuning strategy</p>
+              <div class="related-work-meta">
+                <span class="venue">ICLR 2025</span>
+                <span class="authors">Didolkar et al.</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Citation section - More compact -->
-  <section class="section" id="BibTeX" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+  <section class="section" id="BibTeX">
     <div class="container is-max-desktop">
-      <h2 class="title" style="font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.03em; margin-bottom: 2rem; font-size: 2.2rem; position: relative;">
-        <span style="display: inline-block; position: relative; color: #333; z-index: 1;">
-          <span style="color: #999; font-weight: 300; font-size: 1rem; display: block; margin-bottom: 0.3rem; text-transform: uppercase; letter-spacing: 0.05em;">Citation</span>
+      <h2 class="title inter-title">
+        <span class="bibtex-label">
+          <span class="bibtex-label-inner">Citation</span>
           BibTeX
         </span>
       </h2>
-      <div style="border-left: 1px solid rgba(0,0,0,0.08); padding-left: 2rem; margin: 2rem 0;">
+      <div class="bibtex-block">
         <div class="content">
-          <pre style="background-color: #fcfcfc; border: none; padding: 1.5rem 0;"><code id="citationText" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; color: #333;">@inproceedings{didolkar2025ctrlo,
+          <pre class="citation-pre"><code id="citationText" class="citation-code">@inproceedings{didolkar2025ctrlo,
     title={CTRL-O: Language-Controllable Object-Centric Visual Representation Learning},
     author={Didolkar, Aniket Rajiv and Zadaianchuk, Andrii and Awal, Rabiul and Seitzer, Maximilian and Gavves, Efstratios and Agrawal, Aishwarya},
     booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
     year={2025}
 }</code></pre>
-          <button class="copy-button" id="copyButton" style="background-color: transparent; color: #333; border: 1px solid rgba(0,0,0,0.1); border-radius: 0; padding: 0.5rem 1.5rem; transition: all 0.2s ease;">
+          <button class="citation-button" id="copyButton">
             <i class="fas fa-copy"></i> Copy Citation
           </button>
         </div>

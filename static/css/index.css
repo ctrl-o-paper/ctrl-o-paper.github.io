@@ -38,7 +38,7 @@ html, body {
 /* Layout */
 .hero, .section {
   position: relative;
-  padding: 3rem 1.5rem;
+  padding: 1.5rem 1rem;
 }
 
 .hero.is-light {
@@ -84,26 +84,23 @@ html, body {
 
 /* Navigation */
 .navbar {
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border-color);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  background: rgba(255,255,255,0.7);
+  box-shadow: none;
+  border-bottom: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 .navbar-item {
-  font-weight: 500;
   color: var(--secondary-color);
-  padding: 0.75rem 1.25rem;
-  transition: color var(--transition-base), border-bottom var(--transition-base);
+  font-weight: 500;
+  padding: 0.7rem 1.1rem;
   border-bottom: 2px solid transparent;
   background: none;
+  transition: color var(--transition-base), border-bottom var(--transition-base);
 }
 
-.navbar-item:hover,
-.navbar-item.is-active {
+.navbar-item:hover, .navbar-item.is-active {
   color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
   background: none;
@@ -220,12 +217,12 @@ html, body {
 /* Highlights section */
 .highlights-section {
   background-color: white;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
 }
 
 .highlights-title {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
 .paper-highlights-row {
@@ -281,7 +278,7 @@ html, body {
 
 /* Model section */
 .model-figure {
-  margin: 0 auto 2rem;
+  margin: 0 auto 1.2rem;
   text-align: center;
   width: 100%;
   position: relative;
@@ -313,7 +310,7 @@ html, body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  margin: 2rem auto;
+  margin: 1.2rem auto;
   max-width: 900px;
 }
 
@@ -367,7 +364,7 @@ html, body {
 
 /* Table styles */
 .table-container {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
 }
 
 .table {
@@ -429,8 +426,8 @@ html, body {
 /* Citation section */
 .bibtex-block {
   border-left: 1px solid rgba(0,0,0,0.08);
-  padding-left: 2rem;
-  margin: 2rem 0;
+  padding-left: 1.2rem;
+  margin: 1.2rem 0;
 }
 
 .citation-pre {
@@ -526,7 +523,7 @@ html, body {
 }
 
 .downstream-figure {
-  margin: 0 auto 2rem;
+  margin: 0 auto 1.2rem;
   text-align: center;
   position: relative;
 }
@@ -559,7 +556,7 @@ html, body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  margin: 2rem auto;
+  margin: 1.2rem auto;
   max-width: 900px;
 }
 
@@ -635,6 +632,13 @@ html, body {
 }
 
 @media (max-width: 700px) {
+  .hero, .section {
+    padding: 1rem 0.5rem;
+  }
+  .carded-section {
+    padding: 1rem 0.5rem 0.85rem 0.5rem;
+    margin: 0.75rem 0;
+  }
   .hero-title {
     font-size: 1.1rem;
     margin-bottom: 0.7rem;
@@ -648,11 +652,6 @@ html, body {
   
   .hero-affiliations {
     font-size: 0.88rem;
-  }
-  
-  .hero {
-    padding-top: 1.1rem;
-    padding-bottom: 0.7rem;
   }
   
   .hero-btn {
@@ -674,7 +673,7 @@ html, body {
   
   .model-figure,
   .downstream-figure {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
   }
   
   .model-figure figcaption,
@@ -855,8 +854,8 @@ html, body {
   background: #fff;
   border-radius: 18px;
   box-shadow: 0 4px 24px 0 rgba(44,62,80,0.08);
-  padding: 2.5rem 2rem 2rem 2rem;
-  margin: 2.5rem 0;
+  padding: 1.5rem 1rem 1.25rem 1rem;
+  margin: 1.25rem 0;
   max-width: 100%;
   position: relative;
 }
@@ -864,25 +863,171 @@ html, body {
   font-size: 1.35rem;
   font-weight: 700;
   color: var(--secondary-color);
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.7rem;
   letter-spacing: -0.01em;
 }
 .carded-section-text {
   font-size: 1.08rem;
   color: var(--text-light);
   line-height: 1.7;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.7rem;
 }
 @media (max-width: 700px) {
   .carded-section {
-    padding: 1.2rem 0.7rem 1.2rem 0.7rem;
-    border-radius: 10px;
+    padding: 0.85rem 0.5rem 0.85rem 0.5rem;
+    margin: 0.75rem 0;
   }
   .carded-section-title {
     font-size: 1.08rem;
   }
   .carded-section-text {
     font-size: 0.98rem;
+  }
+}
+
+/* Standardize stacked element spacing */
+.carded-section-title,
+.highlights-title,
+.title,
+.model-figure figcaption,
+.downstream-figure figcaption {
+  margin-bottom: 0.7rem;
+}
+.carded-section-text,
+.content-spacing,
+.model-figure,
+.downstream-figure,
+.model-annotations-flex,
+.downstream-annotations-flex,
+.paper-highlights-row,
+.related-work-grid {
+  margin-bottom: 1.2rem;
+}
+/* Remove excessive or duplicate spacing */
+.hero-divider,
+.hero-buttons {
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.highlights-section {
+  padding: 1.5rem 0;
+}
+.bibtex-block {
+  margin: 1.2rem 0;
+  padding-left: 1.2rem;
+}
+/* Remove any outlier margin/padding from annotation cards */
+.model-annotation-col,
+.annotation-ab {
+  margin-bottom: 0;
+}
+/* Table container spacing */
+.table-container {
+  margin-bottom: 0.7rem;
+}
+
+/* Hero Landing Section */
+.hero-landing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  background: linear-gradient(120deg, #f5f7fa 60%, #eaf1fb 100%);
+  padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+  border-radius: 0 0 2.5rem 2.5rem;
+  box-shadow: 0 2px 24px 0 rgba(44,62,80,0.04);
+  gap: 3rem;
+}
+.hero-landing-content {
+  flex: 1 1 0;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-landing-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 1.1rem;
+  line-height: 1.13;
+}
+.hero-landing-subtitle {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  letter-spacing: 0.01em;
+}
+.hero-landing-authors {
+  font-size: 1.05rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+.hero-landing-affiliations {
+  font-size: 0.95rem;
+  color: var(--text-lighter);
+  margin-bottom: 1.1rem;
+}
+.hero-landing-desc {
+  font-size: 1.13rem;
+  color: var(--text-light);
+  margin-bottom: 1.3rem;
+  line-height: 1.7;
+}
+.hero-landing-buttons {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.1rem;
+}
+.hero-landing-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  border: none;
+  transition: background var(--transition-base), color var(--transition-base), box-shadow var(--transition-base);
+}
+.hero-landing-btn:hover {
+  background: var(--accent-color);
+  color: #fff;
+  box-shadow: var(--shadow-md);
+}
+.hero-landing-image {
+  flex: 1 1 0;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-landing-image img {
+  width: 100%;
+  max-width: 370px;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(50, 115, 220, 0.10), 0 1.5px 8px 0 rgba(44,62,80,0.08);
+  background: #fff;
+  display: block;
+}
+@media (max-width: 900px) {
+  .hero-landing {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0.5rem 2rem 0.5rem;
+    border-radius: 0 0 1.5rem 1.5rem;
+  }
+  .hero-landing-content, .hero-landing-image {
+    max-width: 100%;
+  }
+  .hero-landing-title {
+    font-size: 2rem;
   }
 }
 

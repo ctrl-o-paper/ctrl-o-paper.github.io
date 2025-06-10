@@ -546,59 +546,41 @@
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="carded-section">
-          <h2 class="title inter-title carded-section-title">
-            <span class="title-wrapper">
-              <span class="title-label">Applications</span>
-              Downstream Applications
-            </span>
-          </h2>
-          <div class="content has-text-justified carded-section-text" style="margin-bottom: 0.75rem;">
-            <p>CTRL-O enables powerful downstream applications by providing controllable object-centric representations.</p>
+          <h3 class="title is-5 mb-3"><i class="fas fa-project-diagram"></i> Overview of CTRL-O Downstream Tasks</h3>
+          <figure>
+            <img src="./static/images/converted_figures/ctrlo-downsteam-apps.png" alt="CTRL-O multimodal applications" class="is-block mx-auto"/>
+            <figcaption class="has-text-centered mt-2 is-size-7">DOWNSTREAM APPLICATIONS</figcaption>
+          </figure>
+          <div class="downstream-annotations-flex mt-4">
+            <div class="has-text-centered annotation-ab">
+              <h5 class="is-size-5 mb-2">T2I Generation</h5>
+              <p class="has-text-grey">Instance-specific text-to-image generation with context preservation</p>
+            </div>
+            <div class="has-text-centered annotation-ab">
+              <h5 class="is-size-5 mb-2">Visual QA</h5>
+              <p class="has-text-grey">Language-object binding for precise query answering</p>
+            </div>
           </div>
-          <div style="margin-bottom: 3rem;">
-            <!-- Overview section -->
-            <div class="columns">
-              <div class="column is-12">
-                <h3 class="title is-5 mb-3"><i class="fas fa-project-diagram"></i> Overview of CTRL-O Downstream Tasks</h3>
-                <figure>
-                  <img src="./static/images/converted_figures/ctrlo-downsteam-apps.png" alt="CTRL-O multimodal applications" class="is-block mx-auto"/>
-                  <figcaption class="has-text-centered mt-2 is-size-7">DOWNSTREAM APPLICATIONS</figcaption>
-                </figure>
-                <div class="downstream-annotations-flex mt-4">
-                  <div class="has-text-centered annotation-ab">
-                    <h5 class="is-size-5 mb-2">T2I Generation</h5>
-                    <p class="has-text-grey">Instance-specific text-to-image generation with context preservation</p>
-                  </div>
-                  <div class="has-text-centered annotation-ab">
-                    <h5 class="is-size-5 mb-2">Visual QA</h5>
-                    <p class="has-text-grey">Language-object binding for precise query answering</p>
-                  </div>
-                </div>
-              </div>
+        </div>
+        <!-- Text-to-Image generation - Full width -->
+        <div class="columns mt-5">
+          <div class="column is-12">
+            <h3 class="title is-5 mb-3" style="font-family: 'Inter', sans-serif; font-weight: 600;"><i class="fas fa-images"></i> Instance-Controllable T2I</h3>
+            <p class="mb-3">Instance-specific control over text-to-image generation while maintaining scene context. CTRL-O enables targeted modification of specific objects while preserving the surrounding scene details.</p>
+            <div class="figure-center">
+              <figure class="image">
+                <img src="./static/images/converted_figures/t2i_demo.png" alt="CTRL-O instance-controllable text-to-image generation" class="is-block mx-auto"/>
+              </figure>
             </div>
-            
-            <!-- Text-to-Image generation - Full width -->
-            <div class="columns mt-5">
-              <div class="column is-12">
-                <h3 class="title is-5 mb-3" style="font-family: 'Inter', sans-serif; font-weight: 600;"><i class="fas fa-images"></i> Instance-Controllable T2I</h3>
-                <p class="mb-3">Instance-specific control over text-to-image generation while maintaining scene context. CTRL-O enables targeted modification of specific objects while preserving the surrounding scene details.</p>
-                <div class="figure-center">
-                  <figure class="image">
-                    <img src="./static/images/converted_figures/t2i_demo.png" alt="CTRL-O instance-controllable text-to-image generation" class="is-block mx-auto"/>
-                  </figure>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Visual Question Answering - Full width but more compact -->
-            <div class="columns mt-4">
-              <div class="column is-12">
-                <h3 class="title is-5 mb-2"><i class="fas fa-question-circle"></i> Visual Question Answering</h3>
-                <p>CTRL-O achieves the highest accuracy on VQAv2 in both No-Coupling and Coupling settings, outperforming baseline models.</p>
-                <div class="vqa-chart-container">
-                  <canvas id="vqaChart" height="320"></canvas>
-                </div>
-              </div>
+          </div>
+        </div>
+        <!-- Visual Question Answering - Full width but more compact -->
+        <div class="columns mt-4">
+          <div class="column is-12">
+            <h3 class="title is-5 mb-2"><i class="fas fa-question-circle"></i> Visual Question Answering</h3>
+            <p>CTRL-O achieves the highest accuracy on VQAv2 in both No-Coupling and Coupling settings, outperforming baseline models.</p>
+            <div class="vqa-chart-container">
+              <canvas id="vqaChart" height="320"></canvas>
             </div>
           </div>
         </div>

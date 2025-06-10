@@ -116,7 +116,7 @@
       </div>
       <div class="hero-landing-buttons">
         <a href="static/ctrl-o-paper.pdf" target="_blank" class="hero-landing-btn"><i class="fas fa-file-pdf"></i> Paper</a>
-        <a href="#" class="hero-landing-btn"><i class="fas fa-code"></i> Code</a>
+        <a href="https://github.com/dido1998/CTRL-O" class="hero-landing-btn"><i class="fas fa-code"></i> Code</a>
         <a href="#" class="hero-landing-btn"><i class="fas fa-video"></i> Video</a>
         <a href="#" class="hero-landing-btn"><i class="fas fa-laptop-code"></i> Demo</a>
         <a href="static/ctrl-o-cvpr25-main-poster.pdf" target="_blank" class="hero-landing-btn"><i class="fas fa-image"></i> Poster</a>
@@ -203,19 +203,10 @@
               <img src="./static/images/converted_figures/ctrl-o.png" alt="CTRL-O model"/>
               <figcaption class="has-text-centered mt-2 is-size-7">CTRL-O ARCHITECTURE</figcaption>
             </figure>
-            <div class="model-annotations-flex mt-4">
-              <div class="has-text-centered model-annotation-col">
-                <h5 class="is-size-5 mb-2">Language Control</h5>
-                <p class="has-text-grey">Control queries guide the slot attention process</p>
-              </div>
-              <div class="has-text-centered model-annotation-col">
-                <h5 class="is-size-5 mb-2">Slot Attention Module</h5>
-                <p class="has-text-grey">Features group into object-centric slots</p>
-              </div>
-              <div class="has-text-centered model-annotation-col">
-                <h5 class="is-size-5 mb-2">Contrastive Loss</h5>
-                <p class="has-text-grey">Binds queries to visual objects</p>
-              </div>
+            <div class="content has-text-justified mt-4">
+              <p>
+                CTRL-O builds upon <strong>DINOSAUR's object discovery framework</strong>, which uses Slot Attention to decompose images into object-centric representations. Our key innovation is introducing <strong>language-based control</strong> through three main components: (1) <strong>Query-based Slot Initialization</strong>, where we condition slots on language queries to target specific objects; (2) <strong>Decoder Conditioning</strong>, where we enhance language grounding by conditioning the decoder on control queries; and (3) <strong>Control Contrastive Loss</strong>, which enforces proper grounding by ensuring that slots bind to their corresponding language queries through a contrastive learning objective. This approach enables <strong>precise object-language binding without requiring mask supervision</strong>, making it applicable to real-world scenarios.
+              </p>
             </div>
           </div>
         </div>
@@ -537,15 +528,13 @@
             <img src="./static/images/converted_figures/ctrlo-downsteam-apps.png" alt="CTRL-O multimodal applications" class="is-block mx-auto"/>
             <figcaption class="has-text-centered mt-2 is-size-7">DOWNSTREAM APPLICATIONS</figcaption>
           </figure>
-          <div class="downstream-annotations-flex mt-4">
-            <div class="has-text-centered annotation-ab">
-              <h5 class="is-size-5 mb-2">T2I Generation</h5>
-              <p class="has-text-grey">Instance-specific text-to-image generation with context preservation</p>
-            </div>
-            <div class="has-text-centered annotation-ab">
-              <h5 class="is-size-5 mb-2">Visual QA</h5>
-              <p class="has-text-grey">Language-object binding for precise query answering</p>
-            </div>
+          <div class="content has-text-justified mt-4">
+            <p>
+              <strong>Instance Controllable Image Generation:</strong> CTRL-O enables precise control over specific instances in generated images by leveraging its language-guided object representations. Given a query image, we extract slot representations of target objects using language queries (e.g., "bus" or "laptop"). These slots are then projected into CLIP embeddings and appended to the text prompt (e.g., "A photo of a bus. S_bus"), allowing the diffusion model to generate images that preserve the visual identity of specific instances. Unlike previous approaches that require manual mask reconstruction or fixed slot numbers, CTRL-O provides inherent language-based control and flexible instance conditioning.
+            </p>
+            <p>
+              <strong>Visual Question Answering:</strong> CTRL-O's language-guided object representations enable stronger vision-language coupling in VQA through a novel slot insertion approach. Given a question, we first extract noun chunks (e.g., "cat", "couch") and use them to condition CTRL-O to obtain corresponding object slots. These slots are then inserted directly into the question at appropriate positions (e.g., "What is the color of the cat [slot] sitting on the couch [slot]?"). The slots are projected to match T5's embedding dimension and fed into the language model, creating a strong coupling between visual and language components from the input stage. This approach allows for more direct interaction between object representations and language understanding.
+            </p>
           </div>
         </div>
         <!-- Text-to-Image generation - Full width -->

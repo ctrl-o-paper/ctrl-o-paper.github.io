@@ -1007,6 +1007,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -40px;
 }
 .hero-landing-image img {
   width: 100%;
@@ -1015,6 +1016,7 @@ html, body {
   box-shadow: 0 8px 32px 0 rgba(50, 115, 220, 0.10), 0 1.5px 8px 0 rgba(44,62,80,0.08);
   background: #fff;
   display: block;
+  margin-top: -80px;
 }
 @media (max-width: 900px) {
   .hero-landing {
@@ -1028,6 +1030,9 @@ html, body {
   }
   .hero-landing-title {
     font-size: 2rem;
+  }
+  .hero-landing-image img {
+    margin-top: 0;
   }
 }
 
